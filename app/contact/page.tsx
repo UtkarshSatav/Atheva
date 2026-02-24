@@ -1,0 +1,135 @@
+"use client";
+
+import Image from "next/image";
+
+export default function ContactPage() {
+    return (
+        <div className="relative flex flex-col min-h-screen w-full pt-24">
+            <main className="flex-grow flex justify-center py-16 px-6 md:px-12 lg:px-40 bg-white">
+                <div className="max-w-[1200px] w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+                    {/* Contact Info */}
+                    <div className="flex flex-col gap-10 pt-4">
+                        <div className="space-y-6">
+                            <span className="inline-block py-1 px-0 text-primary-gold text-xs font-bold uppercase tracking-[0.2em]">
+                                Contact Us
+                            </span>
+                            <h1 className="text-5xl md:text-6xl font-serif font-medium tracking-tight text-text-main leading-[1.1]">
+                                Book Your <br />
+                                <span className="italic text-text-muted">Luxury Event</span> Today
+                            </h1>
+                            <p className="text-text-muted text-lg font-light leading-relaxed max-w-md">
+                                Experience the pinnacle of hospitality at ATHEVA. Reach out to schedule a private tour or consultation
+                                with our event specialists.
+                            </p>
+                        </div>
+
+                        <div className="flex flex-col gap-8 mt-4 border-t border-border-subtle pt-8">
+                            {[
+                                { title: "Phone", value: "+1 (555) 123-4567", sub: "Mon-Fri 9am-6pm EST", icon: "call" },
+                                { title: "Email", value: "events@atheva.com", sub: "Online support 24/7", icon: "mail" },
+                                { title: "Address", value: "123 Luxury Lane, Downtown District", sub: "New York, NY 10001", icon: "location_on" },
+                            ].map((item, i) => (
+                                <div key={i} className="flex items-start gap-6 group">
+                                    <div className="flex h-10 w-10 items-center justify-center text-primary-gold transition-colors">
+                                        <span className="material-symbols-outlined text-[28px] font-light">{item.icon}</span>
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <h3 className="text-text-main font-serif text-xl mb-1">{item.title}</h3>
+                                        <p className="text-text-muted font-light">{item.value}</p>
+                                        <p className="text-text-light text-xs mt-1 uppercase tracking-wider">{item.sub}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Simple Map Placeholder */}
+                        <div className="relative w-full h-56 mt-4 grayscale opacity-80 hover:opacity-100 transition-opacity duration-500 border border-border-subtle bg-background-offwhite flex items-center justify-center">
+                            <span className="text-text-light text-sm">Map View Integrated</span>
+                        </div>
+                    </div>
+
+                    {/* Contact Form */}
+                    <div className="flex flex-col">
+                        <div className="bg-background-offwhite p-8 md:p-12 border border-border-subtle shadow-sm h-full rounded-sm">
+                            <div className="mb-10 text-center">
+                                <span className="material-symbols-outlined text-primary-gold text-4xl mb-4 text-center block">edit_square</span>
+                                <h2 className="text-3xl font-serif text-text-main mb-3">Send an Inquiry</h2>
+                                <p className="text-text-muted text-sm font-light">Please detail your event requirements below.</p>
+                            </div>
+                            <form className="flex flex-col gap-8" onSubmit={(e) => e.preventDefault()}>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <label className="flex flex-col gap-2 relative group">
+                                        <span className="text-xs font-bold uppercase tracking-widest text-text-muted group-focus-within:text-primary-gold transition-colors">
+                                            Full Name
+                                        </span>
+                                        <input
+                                            className="w-full bg-transparent border-b border-text-light/30 rounded-none px-0 py-2 text-text-main placeholder-text-light focus:outline-none focus:border-primary-gold transition-colors text-base font-light"
+                                            placeholder="John Doe"
+                                            type="text"
+                                        />
+                                    </label>
+                                    <label className="flex flex-col gap-2 relative group">
+                                        <span className="text-xs font-bold uppercase tracking-widest text-text-muted group-focus-within:text-primary-gold transition-colors">
+                                            Email Address
+                                        </span>
+                                        <input
+                                            className="w-full bg-transparent border-b border-text-light/30 rounded-none px-0 py-2 text-text-main placeholder-text-light focus:outline-none focus:border-primary-gold transition-colors text-base font-light"
+                                            placeholder="john@example.com"
+                                            type="email"
+                                        />
+                                    </label>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <label className="flex flex-col gap-2 relative group">
+                                        <span className="text-xs font-bold uppercase tracking-widest text-text-muted group-focus-within:text-primary-gold transition-colors">
+                                            Event Type
+                                        </span>
+                                        <select className="w-full appearance-none bg-transparent border-b border-text-light/30 rounded-none px-0 py-2 text-text-main focus:outline-none focus:border-primary-gold transition-colors text-base font-light cursor-pointer pr-8">
+                                            <option disabled selected value="">
+                                                Select Type
+                                            </option>
+                                            <option value="wedding">Wedding</option>
+                                            <option value="corporate">Corporate Gala</option>
+                                            <option value="private">Private Party</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </label>
+                                    <label className="flex flex-col gap-2 relative group">
+                                        <span className="text-xs font-bold uppercase tracking-widest text-text-muted group-focus-within:text-primary-gold transition-colors">
+                                            Preferred Date
+                                        </span>
+                                        <input
+                                            className="w-full bg-transparent border-b border-text-light/30 rounded-none px-0 py-2 text-text-main placeholder-text-light focus:outline-none focus:border-primary-gold transition-colors text-base font-light"
+                                            type="date"
+                                        />
+                                    </label>
+                                </div>
+                                <label className="flex flex-col gap-2 relative group mt-2">
+                                    <span className="text-xs font-bold uppercase tracking-widest text-text-muted group-focus-within:text-primary-gold transition-colors">
+                                        Message
+                                    </span>
+                                    <textarea
+                                        className="w-full bg-transparent border border-text-light/20 focus:border-primary-gold rounded-none px-4 py-4 text-text-main placeholder-text-light focus:outline-none transition-colors text-base font-light resize-none mt-1"
+                                        placeholder="Tell us about your vision..."
+                                        rows={4}
+                                    ></textarea>
+                                </label>
+                                <div className="pt-6">
+                                    <button
+                                        className="w-full bg-primary-gold hover:bg-primary-dark text-white font-bold uppercase tracking-widest text-sm py-4 px-8 rounded-none transition-all duration-300 shadow-sm hover:shadow-md"
+                                        type="submit"
+                                    >
+                                        Submit Inquiry
+                                    </button>
+                                    <p className="text-center text-[10px] uppercase tracking-wider text-text-light mt-6">
+                                        By submitting this form, you agree to our <a className="underline hover:text-black" href="#">Privacy Policy</a>.
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    );
+}
