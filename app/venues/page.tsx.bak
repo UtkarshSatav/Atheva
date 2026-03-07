@@ -7,21 +7,21 @@ const fadeInUp = {
   initial: { opacity: 0, y: 40 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: "-100px" },
-  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as unknown as any }
+  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
 };
 
 const slideInLeft = {
   initial: { opacity: 0, x: -60 },
   whileInView: { opacity: 1, x: 0 },
   viewport: { once: true },
-  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as unknown as any }
+  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
 };
 
 const slideInRight = {
   initial: { opacity: 0, x: 60 },
   whileInView: { opacity: 1, x: 0 },
   viewport: { once: true },
-  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as unknown as any }
+  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
 };
 
 export default function VenuesPage() {
@@ -69,7 +69,40 @@ export default function VenuesPage() {
                 </div>
             </div>
 
-
+            {/* Filter Bar */}
+            <motion.div 
+                className="sticky top-[80px] z-40 w-full border-b border-border-subtle bg-white/95 backdrop-blur-sm shadow-sm"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+            >
+                <div className="max-w-[1280px] mx-auto px-4 sm:px-10 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <div className="flex items-center gap-4 overflow-x-auto w-full sm:w-auto no-scrollbar pb-2 sm:pb-0">
+                        <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-background-offwhite border border-border-subtle cursor-pointer hover:border-primary-gold/50 transition-colors group">
+                            <span className="material-symbols-outlined text-text-muted group-hover:text-primary-gold text-[20px]">
+                                filter_list
+                            </span>
+                            <span className="text-sm font-medium text-text-main whitespace-nowrap">Filter By</span>
+                        </div>
+                        <div className="h-6 w-px bg-border-subtle mx-2 hidden sm:block"></div>
+                        <button className="px-5 py-2 rounded-full bg-primary-gold text-white text-sm font-medium transition-all shadow-md shadow-primary-gold/20 whitespace-nowrap">
+                            All Spaces
+                        </button>
+                        <button className="px-5 py-2 rounded-full bg-transparent border border-border-subtle hover:border-primary-gold hover:text-primary-gold text-text-muted text-sm font-medium transition-all whitespace-nowrap">
+                            Weddings
+                        </button>
+                        <button className="px-5 py-2 rounded-full bg-transparent border border-border-subtle hover:border-primary-gold hover:text-primary-gold text-text-muted text-sm font-medium transition-all whitespace-nowrap">
+                            Corporate
+                        </button>
+                        <button className="px-5 py-2 rounded-full bg-transparent border border-border-subtle hover:border-primary-gold hover:text-primary-gold text-text-muted text-sm font-medium transition-all whitespace-nowrap">
+                            Galas
+                        </button>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <span className="text-xs text-text-muted uppercase tracking-wider font-semibold">Showing 3 Venues</span>
+                    </div>
+                </div>
+            </motion.div>
 
             {/* Main Content */}
             <main className="flex-grow w-full max-w-[1280px] mx-auto px-4 sm:px-10 py-20 flex flex-col gap-32">

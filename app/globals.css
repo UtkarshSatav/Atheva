@@ -74,3 +74,98 @@
 .animate-kenburns {
   animation: kenburns 20s ease infinite alternate;
 }
+
+/* react-date-range Custom Overrides for Atheva Theme */
+.rdrCalendarWrapper {
+    color: var(--text-main) !important;
+    background-color: #ffffff !important;
+    font-family: var(--font-display) !important;
+}
+
+.rdrMonthAndYearWrapper {
+    padding-top: 10px !important;
+}
+
+.rdrMonthAndYearPickers select {
+    color: var(--text-main) !important;
+    font-weight: 600 !important;
+}
+
+.rdrNextPrevButton {
+    background: var(--background) !important;
+}
+
+.rdrNextPrevButton:hover {
+    background: #e5e0d8 !important;
+}
+
+.rdrNextPrevButton i {
+    border-color: transparent transparent transparent var(--text-main) !important;
+}
+
+.rdrPprevButton i {
+    border-color: transparent var(--text-main) !important;
+    border-left: 0 !important;
+}
+
+.rdrWeekDay {
+    color: var(--text-muted) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em;
+    font-size: 10px !important;
+}
+
+.rdrDayNumber span {
+    color: var(--text-main) !important;
+    font-weight: 500 !important;
+}
+
+.rdrDayToday .rdrDayNumber span {
+    font-weight: 700 !important;
+}
+
+.rdrDayToday .rdrDayNumber span:after {
+    background: var(--primary) !important;
+}
+
+.rdrDayHovered,
+.rdrDayHovered .rdrDayNumber span {
+    color: var(--text-main) !important;
+}
+
+.rdrDayHovered {
+    border-color: var(--primary) !important;
+    border-radius: 4px !important;
+}
+
+.rdrSelected, .rdrInRange, .rdrStartEdge, .rdrEndEdge {
+    background: var(--primary) !important;
+    border-radius: 4px !important;
+}
+
+.rdrInRange {
+    background: var(--primary-light) !important;
+    color: var(--text-main) !important;
+    border-radius: 0 !important;
+}
+
+.rdrStartEdge {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.rdrEndEdge {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.rdrDay:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span,
+.rdrDay:not(.rdrDayPassive) .rdrEndEdge ~ .rdrDayNumber span,
+.rdrDay:not(.rdrDayPassive) .rdrSelected ~ .rdrDayNumber span {
+    color: white !important;
+}
+
+.rdrDay:not(.rdrDayPassive) .rdrInRange ~ .rdrDayNumber span {
+    color: var(--text-main) !important;
+}

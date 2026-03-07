@@ -7,7 +7,7 @@ const fadeInUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
-  transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as unknown as any }
+  transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as any }
 };
 
 const staggerContainer = {
@@ -129,8 +129,8 @@ export default function ContactPage() {
                         <div className="bg-background-offwhite p-8 md:p-12 border border-border-subtle shadow-sm h-full rounded-sm">
                             <div className="mb-10 text-center">
                                 <span className="material-symbols-outlined text-primary-gold text-4xl mb-4 text-center block">edit_square</span>
-                                <h2 className="text-3xl font-serif text-text-main mb-3">Get in Touch</h2>
-                                <p className="text-text-muted font-light mb-8">We would love to hear from you</p>
+                                <h2 className="text-3xl font-serif text-text-main mb-3">Send an Inquiry</h2>
+                                <p className="text-text-muted text-sm font-light">Please detail your event requirements below.</p>
                             </div>
                             <form className="flex flex-col gap-8" onSubmit={(e) => e.preventDefault()}>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -195,7 +195,7 @@ export default function ContactPage() {
                                         className="w-full bg-primary-gold hover:bg-primary-dark text-white font-bold uppercase tracking-widest text-sm py-4 px-8 rounded-none transition-all duration-300 shadow-sm hover:shadow-md"
                                         type="submit"
                                     >
-                                        Send Message
+                                        Submit Inquiry
                                     </button>
                                     <p className="text-center text-[10px] uppercase tracking-wider text-text-light mt-6">
                                         By submitting this form, you agree to our <a className="underline hover:text-black" href="#">Privacy Policy</a>.

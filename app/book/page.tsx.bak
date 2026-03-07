@@ -1,0 +1,246 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useSearchParams, useRouter } from "next/navigation";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "@/lib/firebase";
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as any }
+};
+
+const ROOM_TYPES = [
+    { id: "deluxe", name: "Deluxe King Room", price: "$250", guests: 2, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDCn1uycBfkz3vKDEPBEJvigqYOTl1luhGml53EJ4LRq5f3D4XjNiutK5Q0NPBh70wk6W6cAXlStdV7XsoDZMMKCOZdRLXLjqGLMLyqQroA-8pP314yisWqsn5SREuNBNqDPE6VLX_xU1msPzCRAtW0t4zJkRwt8sIcUEakSqcXkcYdPYLyhJiX_yzBknoi8qLqkWozQxMEU83u_qY7Db1g4MPut1hZ4t8z1dWc5Z1XU_wjYhIkO5TlC1eg3KvUww47jTraAew6Icue" },
+    { id: "suite", name: "Executive Suite", price: "$450", guests: 4, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC-7JjVZu0TDbK4kzdUn_kyjh59qxYsE5c4IsaeeH77Bpkf_haXkepRbkLSTV-1FHmrSWHJ6tmxjn-bPcH3tYm_lJnK55sXBq7x4lbhMtBaL4dPLkDyRreBA83xpuvR-YE2ewMgrLGOZeBIZEZZWebt_QZQTp-1oEJZZWJUNtdJmI_SqnNIIEZnaU0BM9UNHn6-1lCt57C6bCbJwVWU3btpP4enBARSD30VcH3Ksee8pIYMybrE-DgmrzXyyJzotTufGkrvwYsXfFp1" },
+    { id: "villa", name: "Private Villa", price: "$850", guests: 6, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCBt0ih77ryHmwxBf9V88plinA73HQL9Yn-Dld-oQZonWSi0J87K3SGFi0DKGNsVEggzeA1d7dzqE-CpP_jLvoQjSdRuOZeD774kGf8jLH4tyAzaZ3YTKOjpkUMLvErnU_jKv-G6v_U_J7YA24q67hwHrKrTRqAjHthrxDRMnGGlN5atKJcxSoKFq63RB4O9DdmoMm1cy9-lKnvpvQdgkedI060oZkmZHXoK5F6fCl6hHsnbhTo4Ko6xCrKN3SOXDTVSBgy87T7y84t" }
+];
+
+export default function BookPage() {
+    const searchParams = useSearchParams();
+    const router = useRouter();
+
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        checkIn: searchParams.get("checkIn") || "",
+        checkOut: searchParams.get("checkOut") || "",
+        guests: searchParams.get("guests") || "2",
+        property: searchParams.get("property") || "Any Property",
+        roomType: ROOM_TYPES[0].id,
+        specialRequests: ""
+    });
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [error, setError] = useState("");
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setError("");
+
+        try {
+            await addDoc(collection(db, "bookings"), {
+                ...formData,
+                status: "pending",
+                createdAt: serverTimestamp()
+            });
+            setIsSuccess(true);
+            setTimeout(() => {
+                router.push("/");
+            }, 3000);
+        } catch (err: any) {
+            setError(err.message || "Failed to submit booking inquiry. Please try again.");
+            setIsSubmitting(false);
+        }
+    };
+
+    if (isSuccess) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-background-offwhite px-4">
+                <motion.div 
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    className="bg-white p-12 text-center rounded-sm shadow-2xl max-w-md w-full border-t-4 border-primary-gold"
+                >
+                    <span className="material-symbols-outlined text-6xl text-primary-gold mb-6">check_circle</span>
+                    <h2 className="text-3xl font-serif text-text-main mb-4">Request Received</h2>
+                    <p className="text-text-muted mb-8 font-light leading-relaxed">
+                        Thank you for your interest. Our reservations team will contact you shortly to confirm your booking details.
+                    </p>
+                    <p className="text-xs text-text-light uppercase tracking-widest">Redirecting to home...</p>
+                </motion.div>
+            </div>
+        );
+    }
+
+    return (
+        <div className="min-h-screen bg-background-offwhite pt-32 pb-24 px-4 sm:px-6">
+            <div className="max-w-6xl mx-auto">
+                <motion.div 
+                    className="mb-12 text-center"
+                    {...fadeInUp}
+                >
+                    <span className="text-primary-gold text-xs font-bold tracking-[0.2em] uppercase border-b border-primary-gold/30 pb-1">
+                        Reservations
+                    </span>
+                    <h1 className="text-4xl md:text-5xl font-serif text-text-main mt-4">Complete Your Booking</h1>
+                </motion.div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    {/* Left Column: Form */}
+                    <motion.div 
+                        className="lg:col-span-7 bg-white p-8 md:p-10 rounded-sm shadow-sm border border-border-subtle"
+                        {...fadeInUp}
+                        transition={{ delay: 0.2 }}
+                    >
+                        <h2 className="text-2xl font-serif text-text-main mb-8 border-b border-border-subtle pb-4">Guest Details</h2>
+                        
+                        {error && (
+                            <div className="bg-red-50 text-red-600 p-4 mb-6 rounded-sm text-sm border border-red-100 flex items-center gap-2">
+                                <span className="material-symbols-outlined">error</span>
+                                {error}
+                            </div>
+                        )}
+
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <label className="flex flex-col gap-2">
+                                    <span className="text-xs font-bold uppercase tracking-widest text-text-muted">First Name *</span>
+                                    <input required name="firstName" value={formData.firstName} onChange={handleChange} className="border-b border-text-light/30 py-2 focus:outline-none focus:border-primary-gold transition-colors bg-transparent font-light" placeholder="Jane" />
+                                </label>
+                                <label className="flex flex-col gap-2">
+                                    <span className="text-xs font-bold uppercase tracking-widest text-text-muted">Last Name *</span>
+                                    <input required name="lastName" value={formData.lastName} onChange={handleChange} className="border-b border-text-light/30 py-2 focus:outline-none focus:border-primary-gold transition-colors bg-transparent font-light" placeholder="Doe" />
+                                </label>
+                            </div>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <label className="flex flex-col gap-2">
+                                    <span className="text-xs font-bold uppercase tracking-widest text-text-muted">Email Address *</span>
+                                    <input required type="email" name="email" value={formData.email} onChange={handleChange} className="border-b border-text-light/30 py-2 focus:outline-none focus:border-primary-gold transition-colors bg-transparent font-light" placeholder="jane@example.com" />
+                                </label>
+                                <label className="flex flex-col gap-2">
+                                    <span className="text-xs font-bold uppercase tracking-widest text-text-muted">Phone Number *</span>
+                                    <input required type="tel" name="phone" value={formData.phone} onChange={handleChange} className="border-b border-text-light/30 py-2 focus:outline-none focus:border-primary-gold transition-colors bg-transparent font-light" placeholder="+1 (555) 000-0000" />
+                                </label>
+                            </div>
+
+                            <h3 className="text-lg font-serif text-text-main pt-6 border-b border-border-subtle pb-2">Stay Details</h3>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <label className="flex flex-col gap-2">
+                                    <span className="text-xs font-bold uppercase tracking-widest text-text-muted">Check In</span>
+                                    <input type="date" name="checkIn" value={formData.checkIn} onChange={handleChange} className="border-b border-text-light/30 py-2 focus:outline-none focus:border-primary-gold transition-colors bg-transparent font-light" />
+                                </label>
+                                <label className="flex flex-col gap-2">
+                                    <span className="text-xs font-bold uppercase tracking-widest text-text-muted">Check Out</span>
+                                    <input type="date" name="checkOut" value={formData.checkOut} onChange={handleChange} className="border-b border-text-light/30 py-2 focus:outline-none focus:border-primary-gold transition-colors bg-transparent font-light" />
+                                </label>
+                                <label className="flex flex-col gap-2">
+                                    <span className="text-xs font-bold uppercase tracking-widest text-text-muted">Guests</span>
+                                    <select name="guests" value={formData.guests} onChange={handleChange} className="border-b border-text-light/30 py-2 focus:outline-none focus:border-primary-gold transition-colors bg-transparent font-light">
+                                        {[1,2,3,4,5,6].map(n => <option key={n} value={n}>{n}</option>)}
+                                    </select>
+                                </label>
+                            </div>
+
+                            <label className="flex flex-col gap-2">
+                                <span className="text-xs font-bold uppercase tracking-widest text-text-muted">Property</span>
+                                <select name="property" value={formData.property} onChange={handleChange} className="border-b border-text-light/30 py-2 focus:outline-none focus:border-primary-gold transition-colors bg-transparent font-light">
+                                    <option value="Any Property">Any Available</option>
+                                    <option value="Bhimtal">Atheva Resort, Bhimtal</option>
+                                    <option value="Lansdowne">Atheva Retreat, Lansdowne</option>
+                                </select>
+                            </label>
+
+                            <label className="flex flex-col gap-2 pt-4">
+                                <span className="text-xs font-bold uppercase tracking-widest text-text-muted">Special Requests</span>
+                                <textarea name="specialRequests" value={formData.specialRequests} onChange={handleChange} rows={3} className="border border-text-light/30 p-3 focus:outline-none focus:border-primary-gold transition-colors bg-transparent font-light resize-none mt-1" placeholder="Any dietary requirements, celebrations, or specific needs?"></textarea>
+                            </label>
+
+                            <button 
+                                type="submit" 
+                                disabled={isSubmitting}
+                                className="w-full mt-6 bg-primary-gold hover:bg-primary-dark disabled:bg-primary-light text-white py-4 rounded-sm text-sm font-bold uppercase tracking-widest transition-all shadow-md flex justify-center items-center gap-2"
+                            >
+                                {isSubmitting ? "Processing..." : "Submit Reservation Request"}
+                                {!isSubmitting && <span className="material-symbols-outlined text-sm">arrow_forward</span>}
+                            </button>
+                        </form>
+                    </motion.div>
+
+                    {/* Right Column: Room Selection & Summary */}
+                    <motion.div 
+                        className="lg:col-span-5 flex flex-col gap-6"
+                        {...fadeInUp}
+                        transition={{ delay: 0.4 }}
+                    >
+                        <h2 className="text-2xl font-serif text-text-main mb-2">Select Accommodation</h2>
+                        
+                        <div className="flex flex-col gap-4">
+                            {ROOM_TYPES.map(room => (
+                                <div 
+                                    key={room.id}
+                                    onClick={() => setFormData({...formData, roomType: room.id})}
+                                    className={`flex gap-4 p-3 rounded-sm border cursor-pointer transition-all duration-300 ${formData.roomType === room.id ? "border-primary-gold bg-white shadow-md ring-1 ring-primary-gold/20" : "border-border-subtle bg-white hover:border-primary-gold/50"}`}
+                                >
+                                    <div className="w-24 h-24 shrink-0 rounded-sm overflow-hidden">
+                                        <img src={room.image} alt={room.name} className="w-full h-full object-cover" />
+                                    </div>
+                                    <div className="flex flex-col justify-center flex-1">
+                                        <div className="flex justify-between items-start mb-1">
+                                            <h3 className="font-serif text-lg text-text-main">{room.name}</h3>
+                                            <div className={`w-5 h-5 rounded-full border flex items-center justify-center ${formData.roomType === room.id ? "border-primary-gold bg-primary-gold" : "border-text-light/40"}`}>
+                                                {formData.roomType === room.id && <span className="w-2 h-2 rounded-full bg-white"></span>}
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center gap-3 text-xs text-text-muted font-light mb-2">
+                                            <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[14px]">person</span> Up to {room.guests}</span>
+                                            <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[14px]">bed</span> 1 King</span>
+                                        </div>
+                                        <p className="text-primary-dark font-bold text-sm tracking-wide">{room.price} <span className="text-text-light font-light text-xs lowercase">/night avg.</span></p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="bg-text-main text-white p-6 rounded-sm mt-4 shadow-lg">
+                            <h3 className="text-lg font-serif border-b border-white/20 pb-4 mb-4">Reservation Summary</h3>
+                            <div className="space-y-3 text-sm font-light text-white/80">
+                                <div className="flex justify-between">
+                                    <span>Property:</span>
+                                    <span className="font-medium text-white text-right max-w-[200px] truncate">{formData.property}</span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <span>Dates:</span>
+                                    <span className="font-medium text-white">{formData.checkIn ? formData.checkIn : "TBD"} - {formData.checkOut ? formData.checkOut : "TBD"}</span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <span>Guests:</span>
+                                    <span className="font-medium text-white">{formData.guests}</span>
+                                </div>
+                                <div className="flex justify-between pt-3 border-t border-white/20 mt-3 text-base">
+                                    <span>Room Strategy:</span>
+                                    <span className="font-medium text-primary-gold">{ROOM_TYPES.find(r => r.id === formData.roomType)?.name}</span>
+                                </div>
+                            </div>
+                            <p className="text-[10px] text-white/50 uppercase tracking-widest mt-6 text-center leading-relaxed">
+                                No payment required today. You are submitting an inquiry request.
+                            </p>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+        </div>
+    );
+}

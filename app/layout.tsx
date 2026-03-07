@@ -30,6 +30,8 @@ export const metadata: Metadata = {
   description: "Experience premium hospitality and exquisite events at ATHEVA by Chowk.",
 };
 
+import SmoothScroll from "@/components/SmoothScroll";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,9 +48,11 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} ${playfair.variable} ${cinzel.variable} ${cormorant.variable} antialiased font-display`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <SmoothScroll>
+          <Navbar />
+          {children}
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );
