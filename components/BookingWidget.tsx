@@ -138,7 +138,8 @@ export default function BookingWidget() {
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: 10 }}
-                                    className="absolute top-full left-0 w-full bg-white shadow-2xl z-50 border border-border-subtle mt-1 py-1 max-h-60 overflow-y-auto"
+                                    data-lenis-prevent
+                                    className="absolute top-full left-0 w-full bg-white shadow-2xl z-50 border border-border-subtle mt-1 py-1 max-h-60 overflow-y-auto scrollbar-thin scrollbar-thumb-primary-gold/20"
                                 >
                                     {CITIES.map(city => (
                                         <div 
@@ -179,7 +180,8 @@ export default function BookingWidget() {
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: 10 }}
-                                    className="absolute top-full left-0 w-full bg-white shadow-2xl z-50 border border-border-subtle mt-1 py-1 max-h-60 overflow-y-auto"
+                                    data-lenis-prevent
+                                    className="absolute top-full left-0 w-full bg-white shadow-2xl z-50 border border-border-subtle mt-1 py-1 max-h-60 overflow-y-auto scrollbar-thin scrollbar-thumb-primary-gold/20"
                                 >
                                     {PROPERTIES[selectedCity]?.map(hotel => (
                                         <div 
