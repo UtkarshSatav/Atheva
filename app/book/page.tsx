@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { motion } from "framer-motion";
 import { useSearchParams, useRouter } from "next/navigation";
 
@@ -10,7 +10,7 @@ const fadeInUp = {
   transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as unknown as any }
 };
 
-export default function BookPage() {
+function BookingForm() {
     const searchParams = useSearchParams();
     const router = useRouter();
 
@@ -192,12 +192,20 @@ export default function BookPage() {
                             transition={{ delay: 0.8 }}
                             className="w-full mt-6 bg-primary-gold hover:bg-primary-dark disabled:bg-primary-light text-white py-4 rounded-sm text-sm font-bold uppercase tracking-widest transition-all shadow-md flex justify-center items-center gap-2 hover:shadow-xl hover:-translate-y-0.5"
                         >
-                            {isSubmitting ? "Processing..." : "Submit Reservation Request"}
+                            {isSubmitting ? "Processing..." : "Book Now"}
                             {!isSubmitting && <span className="material-symbols-outlined text-sm">arrow_forward</span>}
                         </motion.button>
                     </form>
                 </motion.div>
             </div>
         </div>
+    );
+}
+
+export default function BookPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-background-offwhite flex items-center justify-center"><p className="text-text-muted animate-pulse">Loading booking details...</p></div>}>
+            <BookingForm />
+        </Suspense>
     );
 }
