@@ -196,7 +196,7 @@ export default function Home() {
                 title: "Boutique Stays",
                 desc: "Comfortable and elegant rooms designed to offer a stay that feels both memorable and meaningful.",
                 icon: "hotel",
-                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCyULf2jUDCHqEEu0bqEj_Vofjdnt8Zx2aMajZzQzYGX3MS8JWSDAOPm0-zxQI_4kDYrNUay4vg22MQUesIuLEVEgnJseAX2ct_ZfcVXnLy7keNzkKYQO0Pg42HfaLHZfz3BlAmihW9CIK85CgsckdvVHiAfmTw98MPOHoutwCYtTvb2CyUb3KFx66m49fclRgQnmwqxb2kq26fZ-yJDq61o1E6C5H3z8cCk_XJw9TJ2JyUqF6DHC3uPDa-My7fNNLvFHII1WgQRIM",
+                img: "/boutique-stay.png",
               },
               {
                 title: "Weddings & Celebrations",
