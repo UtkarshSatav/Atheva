@@ -71,12 +71,11 @@ export default function ContactPage() {
                                 Contact Us
                             </span>
                             <h2 className="text-4xl md:text-5xl font-serif font-medium tracking-tight text-text-main leading-[1.1]">
-                                Book Your <br />
-                                <span className="italic text-text-muted">Luxury Event</span> Today
+                                Hospitality <br />
+                                <span className="italic text-text-muted">With Heart</span>
                             </h2>
                             <p className="text-text-muted text-lg font-light leading-relaxed max-w-md">
-                                Experience the pinnacle of hospitality at ATHEVA. Reach out to schedule a private tour or consultation
-                                with our event specialists.
+                                Whether you are planning a stay, a celebration, or exploring partnership opportunities, our team is ready to assist you.
                             </p>
                         </motion.div>
 
@@ -88,9 +87,9 @@ export default function ContactPage() {
                             viewport={{ once: true }}
                         >
                             {[
-                                { title: "Phone", value: "+1 (555) 123-4567", sub: "Mon-Fri 9am-6pm EST", icon: "call" },
-                                { title: "Email", value: "events@atheva.com", sub: "Online support 24/7", icon: "mail" },
-                                { title: "Address", value: "123 Luxury Lane, Downtown District", sub: "New York, NY 10001", icon: "location_on" },
+                                { title: "Email", value: "info@chowk.co.in", sub: "Online support 24/7", icon: "mail" },
+                                { title: "Address", value: "WZ-24/1 FF Left Side, Mukharjee Park", sub: "New Delhi – 110018", icon: "location_on" },
+                                { title: "Website", value: "www.chowk.co.in", sub: "Visit our ecosystem", icon: "public" },
                             ].map((item, i) => (
                                 <motion.div 
                                     key={i} 
@@ -164,9 +163,10 @@ export default function ContactPage() {
                                             <option disabled selected value="">
                                                 Select Type
                                             </option>
-                                            <option value="wedding">Wedding</option>
-                                            <option value="corporate">Corporate Gala</option>
-                                            <option value="private">Private Party</option>
+                                            <option value="stay">Boutique Stay</option>
+                                            <option value="wedding">Wedding / Celebration</option>
+                                            <option value="corporate">Corporate Retreat</option>
+                                            <option value="partnership">Partnership</option>
                                             <option value="other">Other</option>
                                         </select>
                                     </label>

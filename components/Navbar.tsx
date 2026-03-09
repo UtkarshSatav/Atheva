@@ -45,20 +45,28 @@ export default function Navbar() {
                     </Link>
                 </div>
 
-                <div className="hidden lg:flex flex-[2] items-center justify-center gap-8">
-                    {["Home", "About", "Venues", "Experiences"].map((item, index) => (
+                <div className="hidden lg:flex flex-[3] items-center justify-center gap-6">
+                    {[
+                        { label: "Home", href: "/" },
+                        { label: "About ATHEVA", href: "/about" },
+                        { label: "Destinations", href: "/destinations" },
+                        { label: "Experiences", href: "/experiences" },
+                        { label: "Partner With Us", href: "/partner" },
+                        { label: "Gallery", href: "/gallery" },
+                        { label: "Contact", href: "/contact" }
+                    ].map((item, index) => (
                         <motion.div
-                            key={item}
+                            key={item.label}
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
                             <Link 
-                                href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                                className={`text-sm font-medium tracking-[0.15em] uppercase transition-colors whitespace-nowrap
+                                href={item.href}
+                                className={`text-xs font-medium tracking-[0.15em] uppercase transition-colors whitespace-nowrap
                                     ${scrolled ? "text-text-main hover:text-primary-gold" : "text-white/90 hover:text-white"}`}
                             >
-                                {item}
+                                {item.label}
                             </Link>
                         </motion.div>
                     ))}

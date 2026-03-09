@@ -10,6 +10,8 @@ import { ChevronDown, Plus, Minus, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 const CITIES = [
+    { id: "bhimtal", name: "Bhimtal" },
+    { id: "lansdowne", name: "Lansdowne" },
     { id: "agra", name: "Agra" },
     { id: "ajmer", name: "Ajmer" },
     { id: "ambala", name: "Ambala" },
@@ -21,6 +23,12 @@ const CITIES = [
 ];
 
 const PROPERTIES: Record<string, { id: string, name: string }[]> = {
+    "bhimtal": [
+        { id: "bhimtal-1", name: "ATHEVA Bhimtal" },
+    ],
+    "lansdowne": [
+        { id: "lansdowne-1", name: "ATHEVA Lansdowne" },
+    ],
     "agra": [
         { id: "agra-1", name: "Bhawna Clarks Inn" },
         { id: "agra-2", name: "Clarks Inn Suites" },

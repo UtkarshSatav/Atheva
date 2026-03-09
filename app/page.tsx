@@ -49,7 +49,7 @@ export default function Home() {
             }}
           ></div>
         </motion.div>
-        <div className="relative z-20 text-center max-w-5xl px-6 pt-24">
+        <div className="relative z-20 text-center max-w-5xl px-6 pt-24 pb-32">
           <motion.div 
             className="inline-block border-b border-primary-gold/50 pb-1 mb-6"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -57,7 +57,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <span className="text-white text-xs font-bold tracking-[0.3em] uppercase drop-shadow-md">
-              Welcome to Atheva
+              Hospitality Inspired by Athithi + Seva
             </span>
           </motion.div>
           <motion.h1 
@@ -66,17 +66,16 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Luxury Hospitality & <br />{" "}
-            <span className="italic font-light text-white/90">Premium Experiences</span>
+            ATHEVA <br />{" "}
+            <span className="italic font-light text-white/90 text-4xl md:text-6xl lg:text-7xl block mt-4 whitespace-nowrap">Hospitality Meets Heart</span>
           </motion.h1>
           <motion.p 
-            className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-12 font-light leading-relaxed drop-shadow-md"
+            className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8 font-light leading-relaxed drop-shadow-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Crafting unforgettable weddings and corporate gatherings in the heart of the city, where elegance meets
-            exceptional service.
+            ATHEVA is a boutique hospitality destination rooted in the timeless Indian philosophy of Athithi + Seva — where every guest is welcomed with warmth and served with genuine care.
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-5 justify-center items-center"
@@ -93,7 +92,7 @@ export default function Home() {
           </motion.div>
         </div>
         <motion.div 
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 text-white/60"
+          className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20 text-white/60"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2, repeat: Infinity, repeatType: "reverse" }}
@@ -141,16 +140,13 @@ export default function Home() {
               <span className="text-primary-dark text-xs font-bold tracking-[0.25em] uppercase">About Us</span>
             </div>
             <h2 className="font-serif text-4xl md:text-6xl text-text-main leading-tight">
-              Redefining Luxury in <br /> <span className="italic text-primary-gold">Every Detail</span>
+              A Destination for <br /> <span className="italic text-primary-gold">Meaningful Hospitality</span>
             </h2>
             <p className="text-text-muted text-lg leading-relaxed font-light">
-              At ATHEVA, we believe that true luxury lies in the nuances. From the architectural grandeur of our venues
-              to the meticulous planning of our events, every element is curated to evoke a sense of wonder and
-              exclusivity.
+              ATHEVA is a hospitality concept rooted in the timeless Indian philosophy of "Athithi + Seva" — the belief that every guest deserves heartfelt care and service.
             </p>
             <p className="text-text-muted text-lg leading-relaxed mb-6 font-light">
-              Whether it's an intimate gathering or a grand celebration, our dedicated team ensures your vision is
-              brought to life with unparalleled sophistication and grace.
+              At ATHEVA, hospitality goes beyond providing a place to stay. It is about creating an environment where guests feel valued, comfortable, and connected to the spirit of Indian culture and traditions.
             </p>
             <a
               className="group inline-flex items-center gap-3 text-text-main font-semibold hover:text-primary-gold transition-colors mt-2"
@@ -175,9 +171,9 @@ export default function Home() {
             {...fadeInUp}
           >
             <div className="max-w-2xl">
-              <h2 className="font-serif text-4xl md:text-5xl text-text-main mb-6">Our Curated Offerings</h2>
+              <h2 className="font-serif text-4xl md:text-5xl text-text-main mb-6">Our Experiences</h2>
               <p className="text-text-muted text-lg font-light">
-                Discover our diverse range of premium spaces tailored for every distinct occasion.
+                Every experience at ATHEVA reflects the philosophy of Athithi + Seva, ensuring that every guest is treated with care and sincerity.
               </p>
             </div>
             <a
@@ -197,21 +193,21 @@ export default function Home() {
           >
             {[
               {
-                title: "Weddings & Celebrations",
-                desc: "Elegant ballrooms and scenic outdoor venues designed to make your special day truly magical.",
-                icon: "favorite",
-                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCgyULf2jUDCHqEEu0bqEj_Vofjdnt8Zx2aMajZzQzYGX3MS8JWSDAOPm0-zxQI_4kDYrNUay4vg22MQUesIuLEVEgnJseAX2ct_ZfcVXnLy7keNzkKYQO0Pg42HfaLHZfz3BlAmihW9CIK85CgsckdvVHiAfmTw98MPOHoutwCYtTvb2CyUb3KFx66m49fclRgQnmwqxb2kq26fZ-yJDq61o1E6C5H3z8cCk_XJw9TJ2JyUqF6DHC3uPDa-My7fNNLvFHII1WgQRIM",
+                title: "Boutique Stays",
+                desc: "Comfortable and elegant rooms designed to offer a stay that feels both memorable and meaningful.",
+                icon: "hotel",
+                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCyULf2jUDCHqEEu0bqEj_Vofjdnt8Zx2aMajZzQzYGX3MS8JWSDAOPm0-zxQI_4kDYrNUay4vg22MQUesIuLEVEgnJseAX2ct_ZfcVXnLy7keNzkKYQO0Pg42HfaLHZfz3BlAmihW9CIK85CgsckdvVHiAfmTw98MPOHoutwCYtTvb2CyUb3KFx66m49fclRgQnmwqxb2kq26fZ-yJDq61o1E6C5H3z8cCk_XJw9TJ2JyUqF6DHC3uPDa-My7fNNLvFHII1WgQRIM",
               },
               {
-                title: "Corporate Events",
-                desc: "State-of-the-art facilities and impeccable service for impactful conferences and executive meetings.",
-                icon: "meeting_room",
+                title: "Weddings & Celebrations",
+                desc: "A beautiful venue for life's most meaningful moments, from destination weddings to family gatherings.",
+                icon: "favorite",
                 img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCCxFs6UlYnBlNvQA-BkqHTGD6QvYfT8nxGIkNzeLwu22HqKALeXjCTQ4AnQqGsPVLiPKg8H_ZL875_EMjAGJrLE4xW_oq8R2Ihm-DfiypSzvXQrHxMfMtP0nR-0YSND_y9aRPg5EuuNQRBa0V958i2US79zjm4uJ5zeaeWJydOkd_0B_oausxS-lxxW2mEngJ7LO0vIZOOEuV0EtOqlUE9hZ2kVUOMaEydPkNvojyAg7IJLNsYUuxPnsSihDsHZbdiavJo6txaNGZ_",
               },
               {
-                title: "Private Parties",
-                desc: "Intimate lounges and exclusive dining areas for sophisticated gatherings and social soirees.",
-                icon: "local_bar",
+                title: "Corporate Retreats",
+                desc: "An ideal setting for team retreats and leadership meetings, where ideas and inspiration meet.",
+                icon: "business",
                 img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAx8osFPriDVOKiMmFHnTyLTNRAzAsQQ5WbWD849Kv2-lA0pVNDwnYzH6MQCi0dvk9v9PN40JE1j0vlEmOj1KjSeVsS8GYVHnCsqYB3vgvX0WCEB5vgt7HhZkM7aVOXdbuz9BqgHsPOQU4j18GEEofqcs15wB31_s4MlhN_P07GGBU3eQA_HpcR4DCyP_PahM1etaQYVoUgvk_4kUkLKoy-QRnFaJrSI6Nke5ZlGKTjZD2OTir099_ltUd9SACWg80cFuK8NRq_Zgqt",
               },
             ].map((item, i) => (
@@ -255,7 +251,7 @@ export default function Home() {
             <span className="text-primary-dark text-xs font-bold tracking-[0.25em] uppercase mb-6 block">
               The ATHEVA Standard
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl text-text-main leading-tight">Why Choose Us</h2>
+            <h2 className="font-serif text-4xl md:text-5xl text-text-main leading-tight">Hospitality Inspired by Indian Values</h2>
           </motion.div>
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-3 gap-12"
@@ -266,19 +262,19 @@ export default function Home() {
           >
             {[
               {
-                title: "Premium Design",
-                desc: "Architecturally stunning spaces meticulously designed to impress the most discerning guests with timeless elegance.",
-                icon: "diamond",
+                title: "Athithi",
+                desc: "The Guest. Indian culture has always placed great importance on welcoming guests with respect and generosity.",
+                icon: "person",
               },
               {
-                title: "Custom Solutions",
-                desc: "Tailored event planning services that adapt to your specific vision, ensuring a unique and personalized experience.",
-                icon: "handshake",
+                title: "Seva",
+                desc: "Selfless Service. We drawing inspiration from this tradition by creating spaces that celebrate community and connection.",
+                icon: "volunteer_activism",
               },
               {
-                title: "World-Class Amenities",
-                desc: "Top-tier catering partnerships, advanced audio-visual technology, and white-glove support staff at your disposal.",
-                icon: "hotel_class",
+                title: "Indian Values",
+                desc: "From the warmth of our service to the design of our spaces, every element is crafted to offer a sense of belonging.",
+                icon: "temple_hindu",
               },
             ].map((item, i) => (
               <motion.div
@@ -294,6 +290,55 @@ export default function Home() {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* CHOWK Ecosystem Section */}
+      <section className="py-24 px-6 md:px-12 bg-background-offwhite border-y border-border-subtle">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <motion.div 
+                className="relative"
+                {...fadeInUp}
+            >
+                <img 
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCxFs6UlYnBlNvQA-BkqHTGD6QvYfT8nxGIkNzeLwu22HqKALeXjCTQ4AnQqGsPVLiPKg8H_ZL875_EMjAGJrLE4xW_oq8R2Ihm-DfiypSzvXQrHxMfMtP0nR-0YSND_y9aRPg5EuuNQRBa0V958i2US79zjm4uJ5zeaeWJydOkd_0B_oausxS-lxxW2mEngJ7LO0vIZOOEuV0EtOqlUE9hZ2kVUOMaEydPkNvojyAg7IJLNsYUuxPnsSihDsHZbdiavJo6txaNGZ_" 
+                    alt="CHOWK Ecosystem" 
+                    className="rounded-sm shadow-2xl grayscale-[20%]"
+                />
+            </motion.div>
+            <motion.div 
+                className="flex flex-col gap-8"
+                {...fadeInUp}
+            >
+                <div className="flex items-center gap-3 mb-2">
+                    <span className="h-px w-16 bg-primary-gold"></span>
+                    <span className="text-primary-dark text-xs font-bold tracking-[0.25em] uppercase">Part of the CHOWK Entertainment Ecosystem</span>
+                </div>
+                <h2 className="font-serif text-4xl md:text-5xl text-text-main leading-tight">
+                    An Integrated Platform for <br /> <span className="italic text-primary-gold">Destination Experiences</span>
+                </h2>
+                <div className="space-y-6 text-text-muted text-lg font-light leading-relaxed">
+                    <p>
+                        ATHEVA is a hospitality vertical of the CHOWK Entertainment Ecosystem, an integrated platform focused on developing destination experiences across India.
+                    </p>
+                    <ul className="space-y-4">
+                        <li className="flex gap-4">
+                            <span className="text-primary-gold font-bold">CHOWK</span>
+                            <span>Creates entertainment and lifestyle hubs</span>
+                        </li>
+                        <li className="flex gap-4">
+                            <span className="text-primary-gold font-bold">ARENAA</span>
+                            <span>Builds vibrant food and entertainment destinations</span>
+                        </li>
+                        <li className="flex gap-4">
+                            <span className="text-primary-gold font-bold">ATHEVA</span>
+                            <span>Delivers refined hospitality and celebration experiences</span>
+                        </li>
+                    </ul>
+                </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 

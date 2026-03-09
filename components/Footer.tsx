@@ -35,17 +35,20 @@ export default function Footer() {
                         <h2 className="font-cinzel text-xl font-bold text-white tracking-widest">ATHEVA</h2>
                     </div>
                     <p className="text-gray-400 text-sm leading-relaxed mb-8 font-light">
-                        A sanctuary of luxury and elegance for your most cherished moments. Experience the exceptional.
+                        Hospitality Inspired by Athithi + Seva. Rooted in timeless Indian philosophy, ATHEVA blends modern comfort with traditional warmth.
                     </p>
                     <div className="flex gap-5">
-                        <motion.a whileHover={{ scale: 1.2, color: "var(--primary-gold)" }} className="text-gray-400 transition-colors" href="#">
-                            <span className="material-symbols-outlined">thumb_up</span>
+                        <motion.a whileHover={{ scale: 1.2, color: "var(--primary-gold)" }} className="text-gray-400 transition-colors" href="https://www.facebook.com/profile.php?id=61586878500352" target="_blank" rel="noopener noreferrer">
+                            <i className="fab fa-facebook-f"></i>
+                            <span className="sr-only">Facebook</span>
                         </motion.a>
-                        <motion.a whileHover={{ scale: 1.2, color: "var(--primary-gold)" }} className="text-gray-400 transition-colors" href="#">
-                            <span className="material-symbols-outlined">photo_camera</span>
+                        <motion.a whileHover={{ scale: 1.2, color: "var(--primary-gold)" }} className="text-gray-400 transition-colors" href="https://www.instagram.com/arenaabychowk/" target="_blank" rel="noopener noreferrer">
+                            <i className="fab fa-instagram"></i>
+                            <span className="sr-only">Instagram</span>
                         </motion.a>
-                        <motion.a whileHover={{ scale: 1.2, color: "var(--primary-gold)" }} className="text-gray-400 transition-colors" href="#">
-                            <span className="material-symbols-outlined">public</span>
+                        <motion.a whileHover={{ scale: 1.2, color: "var(--primary-gold)" }} className="text-gray-400 transition-colors" href="https://www.linkedin.com/showcase/arenaabychowk/" target="_blank" rel="noopener noreferrer">
+                            <i className="fab fa-linkedin-in"></i>
+                            <span className="sr-only">LinkedIn</span>
                         </motion.a>
                     </div>
                 </motion.div>
@@ -54,9 +57,10 @@ export default function Footer() {
                         Explore
                     </h3>
                     <ul className="flex flex-col gap-4">
-                        <li><Link className="text-gray-400 hover:text-primary-gold transition-colors text-sm font-light tracking-wide" href="/#about">About Us</Link></li>
-                        <li><Link className="text-gray-400 hover:text-primary-gold transition-colors text-sm font-light tracking-wide" href="/venues">Our Venues</Link></li>
-                        <li><Link className="text-gray-400 hover:text-primary-gold transition-colors text-sm font-light tracking-wide" href="/experiences">Services</Link></li>
+                        <li><Link className="text-gray-400 hover:text-primary-gold transition-colors text-sm font-light tracking-wide" href="/about">About Us</Link></li>
+                        <li><Link className="text-gray-400 hover:text-primary-gold transition-colors text-sm font-light tracking-wide" href="/destinations">Destinations</Link></li>
+                        <li><Link className="text-gray-400 hover:text-primary-gold transition-colors text-sm font-light tracking-wide" href="/experiences">Experiences</Link></li>
+                        <li><Link className="text-gray-400 hover:text-primary-gold transition-colors text-sm font-light tracking-wide" href="/partner">Partner With Us</Link></li>
                         <li><Link className="text-gray-400 hover:text-primary-gold transition-colors text-sm font-light tracking-wide" href="/gallery">Gallery</Link></li>
                     </ul>
                 </motion.div>
@@ -67,15 +71,15 @@ export default function Footer() {
                     <ul className="flex flex-col gap-4">
                         <li className="flex items-start gap-3 text-gray-400 text-sm font-light">
                             <span className="material-symbols-outlined text-base mt-0.5 text-primary-gold">location_on</span>
-                            123 Luxury Ave, <br />Metropolis City, NY 10012
-                        </li>
-                        <li className="flex items-center gap-3 text-gray-400 text-sm font-light">
-                            <span className="material-symbols-outlined text-base text-primary-gold">call</span>
-                            +1 (555) 123-4567
+                            WZ-24/1 FF Left Side, <br />Mukharjee Park, <br />New Delhi – 110018
                         </li>
                         <li className="flex items-center gap-3 text-gray-400 text-sm font-light">
                             <span className="material-symbols-outlined text-base text-primary-gold">mail</span>
-                            concierge@atheva.com
+                            info@chowk.co.in
+                        </li>
+                        <li className="flex items-center gap-3 text-gray-400 text-sm font-light">
+                            <span className="material-symbols-outlined text-base text-primary-gold">public</span>
+                            www.chowk.co.in
                         </li>
                     </ul>
                 </motion.div>
@@ -106,7 +110,7 @@ export default function Footer() {
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.5 }}
             >
-                <p className="text-gray-500 text-xs tracking-wide">© 2024 ATHEVA by Chowk. All rights reserved.</p>
+                <p className="text-gray-500 text-xs tracking-wide">© 2025 ATHEVA by CHOWK. All rights reserved.</p>
                 <div className="flex gap-8">
                     <Link className="text-gray-500 hover:text-white transition-colors text-xs tracking-wide" href="/privacy">Privacy Policy</Link>
                     <Link className="text-gray-500 hover:text-white transition-colors text-xs tracking-wide" href="/terms">Terms of Service</Link>

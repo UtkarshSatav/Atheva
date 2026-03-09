@@ -83,9 +83,9 @@ export default function AboutPage() {
                         transition={{ duration: 0.8 }}
                     >
                         <span className="text-primary-gold text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase border-b border-primary-gold/50 pb-1 px-4 inline-block mb-6 bg-black/30 backdrop-blur-sm rounded-sm">
-                            Our Heritage
+                            The Philosophy
                         </span>
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-white drop-shadow-md">About Atheva</h1>
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-white drop-shadow-md">Athithi + Seva</h1>
                     </motion.div>
                 </div>
             </div>
@@ -106,10 +106,13 @@ export default function AboutPage() {
                         </h2>
                         <div className="space-y-6 text-text-muted text-lg font-light leading-relaxed">
                             <p>
-                                Founded on the belief that hospitality should be an art form, Atheva was born from a desire to create sanctuaries of elegance for the world's most discerning guests. Our journey began with a single boutique space, envisioned as a retreat where every detail was meticulously planned.
+                                ATHEVA is a hospitality concept rooted in the timeless Indian philosophy of “Athithi + Seva” — the belief that every guest deserves heartfelt care and service.
                             </p>
                             <p>
-                                Today, the Atheva portfolio represents the pinnacle of luxury, curating spaces for grand celebrations, high-stakes corporate retreats, and intimate getaways alike. We do not just offer rooms; we offer unforgettable narratives.
+                                The name ATHEVA brings together two powerful ideas: <strong>Athithi</strong> (The Guest) and <strong>Seva</strong> (Selfless Service). Together, they represent a hospitality philosophy where guests are welcomed with warmth, respect, and genuine care.
+                            </p>
+                            <p>
+                                At ATHEVA, hospitality goes beyond providing a place to stay. It is about creating an environment where guests feel valued, comfortable, and connected to the spirit of Indian culture and traditions.
                             </p>
                         </div>
                     </motion.div>
@@ -140,7 +143,7 @@ export default function AboutPage() {
                         <span className="text-primary-dark text-xs font-bold tracking-[0.25em] uppercase mb-4 block">
                             Our Philosophy
                         </span>
-                        <h2 className="font-serif text-4xl py-2 md:text-5xl text-text-main leading-tight">The Pillars of Atheva</h2>
+                        <h2 className="font-serif text-4xl py-2 md:text-5xl text-text-main leading-tight">Hospitality Rooted in Indian Tradition</h2>
                     </motion.div>
 
                     <motion.div 
@@ -150,7 +153,28 @@ export default function AboutPage() {
                         whileInView="whileInView"
                         viewport={{ once: true }}
                     >
-                        {CORE_VALUES.map((value, i) => (
+                        {[
+                            {
+                                title: "Athithi - The Guest",
+                                desc: "Indian culture has long embraced the belief of 'Athithi Devo Bhava', meaning the guest is treated with the same reverence as a divine presence.",
+                                icon: "person"
+                            },
+                            {
+                                title: "Seva - Selfless Service",
+                                desc: "The foundation of our hospitality philosophy where every interaction reflects a commitment to graceful hospitality and thoughtful care.",
+                                icon: "volunteer_activism"
+                            },
+                            {
+                                title: "Meaningful Hospitality",
+                                desc: "Blends modern comfort with Indian warmth to create spaces that feel both welcoming and authentic.",
+                                icon: "favorite"
+                            },
+                            {
+                                title: "Cultural Connection",
+                                desc: "Every element is thoughtfully crafted to offer guests a sense of belonging and connection to Indian traditions.",
+                                icon: "temple_hindu"
+                            }
+                        ].map((value, i) => (
                             <motion.div 
                                 key={i}
                                 variants={fadeInUp}
