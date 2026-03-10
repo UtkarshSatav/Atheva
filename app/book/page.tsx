@@ -78,7 +78,7 @@ function BookingForm() {
             <div className="relative w-full h-[40vh] md:h-[50vh] min-h-[350px] mb-12">
                 <div className="absolute inset-0 bg-black/40 z-10" />
                 <img 
-                    src="/booking-hero.png" 
+                    src="/lansdowne-7.jpeg" 
                     alt="Atheva Resort Booking" 
                     className="w-full h-full object-cover"
                 />

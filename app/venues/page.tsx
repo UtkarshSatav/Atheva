@@ -33,7 +33,7 @@ export default function VenuesPage() {
                     className="absolute inset-0 z-0 bg-cover bg-center"
                     style={{
                         backgroundImage:
-                            "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCn1uycBfkz3vKDEPBEJvigqYOTl1luhGml53EJ4LRq5f3D4XjNiutK5Q0NPBh70wk6W6cAXlStdV7XsoDZMMKCOZdRLXLjqGLMLyqQroA-8pP314yisWqsn5SREuNBNqDPE6VLX_xU1msPzCRAtW0t4zJkRwt8sIcUEakSqcXkcYdPYLyhJiX_yzBknoi8qLqkWozQxMEU83u_qY7Db1g4MPut1hZ4t8z1dWc5Z1XU_wjYhIkO5TlC1eg3KvUww47jTraAew6Icue')",
+                            "url('/lansdowne-6.jpeg')",
                     }}
                     initial={{ scale: 1.1 }}
                     animate={{ scale: 1 }}
@@ -84,7 +84,7 @@ export default function VenuesPage() {
                                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                                 style={{
                                     backgroundImage:
-                                        "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBt0ih77ryHmwxBf9V88plinA73HQL9Yn-Dld-oQZonWSi0J87K3SGFi0DKGNsVEggzeA1d7dzqE-CpP_jLvoQjSdRuOZeD774kGf8jLH4tyAzaZ3YTKOjpkUMLvErnU_jKv-G6v_U_J7YA24q67hwHrKrTRqAjHthrxDRMnGGlN5atKJcxSoKFq63RB4O9DdmoMm1cy9-lKnvpvQdgkedI060oZkmZHXoK5F6fCl6hHsnbhTo4Ko6xCrKN3SOXDTVSBgy87T7y84t')",
+                                        "url('/lansdowne-12.jpeg')",
                                 }}
                             ></div>
                             <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-sm border-l-4 border-primary-gold flex items-center gap-2 shadow-sm">
@@ -188,7 +188,7 @@ export default function VenuesPage() {
                                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                                 style={{
                                     backgroundImage:
-                                        "url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-7JjVZu0TDbK4kzdUn_kyjh59qxYsE5c4IsaeeH77Bpkf_haXkepRbkLSTV-1FHmrSWHJ6tmxjn-bPcH3tYm_lJnK55sXBq7x4lbhMtBaL4dPLkDyRreBA83xpuvR-YE2ewMgrLGOZeBIZEZZWebt_QZQTp-1oEJZZWJUNtdJmI_SqnNIIEZnaU0BM9UNHn6-1lCt57C6bCbJwVWU3btpP4enBARSD30VcH3Ksee8pIYMybrE-DgmrzXyyJzotTufGkrvwYsXfFp1')",
+                                        "url('/lansdowne-8.jpeg')",
                                 }}
                             ></div>
                         </motion.div>

@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -10,46 +11,118 @@ const fadeInUp = {
 };
 
 const GALLERY_IMAGES = [
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuCmCfOAVvbFJmKjF9m40j5Hp3g7APP5nIXFcvz4kjpQXOxTRYz5cWREjQiwuVe3MRHIaEJ8Lxza-_QoQ31R0_qxs9eDaKfz9s46kiouYs0RBzNaIdDl8UqApw9DoJOXRQKk9UhYAvDOhEu7QWj9sx7wNwmCy2JVUEmW0Wuf2h2fkFlqmQJoMuWtqr1LOzz4e9k9ieTXEMs_50K3ko8l3awi-YRSOeRRekp1J2hP5Ijx2EhEVBm1sbxsPlj3UnaMLGDa3NLHX-dpIJQY",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuDymQx_o-WJ7SBegaTFGei8Yf-b5B-dbfAYYhFn434nW2QVwSl3g3Y9XZTezgrNuvdd6dRLl8hlx336U-ChJ5GxTel8anDsv6_hPSYLlhNloxFDRbsPbYevKSdDQ_KZQy4kuy2HWlZFwnpRx5tH7mBJASXOvkubonNZ0AW0QsDZ7gKDIggOXLv-m6yULaecyBY3S6g7lwVIlACTUMnt9i-3zGw0ak6qta9B52qkpW4JBgQoxUzZuBng6t0l4cGF3ZFzD55z-KeYsl11",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuCCxFs6UlYnBlNvQA-BkqHTGD6QvYfT8nxGIkNzeLwu22HqKALeXjCTQ4AnQqGsPVLiPKg8H_ZL875_EMjAGJrLE4xW_oq8R2Ihm-DfiypSzvXQrHxMfMtP0nR-0YSND_y9aRPg5EuuNQRBa0V958i2US79zjm4uJ5zeaeWJydOkd_0B_oausxS-lxxW2mEngJ7LO0vIZOOEuV0EtOqlUE9hZ2kVUOMaEydPkNvojyAg7IJLNsYUuxPnsSihDsHZbdiavJo6txaNGZ_",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuAx8osFPriDVOKiMmFHnTyLTNRAzAsQQ5WbWD849Kv2-lA0pVNDwnYzH6MQCi0dvk9v9PN40JE1j0vlEmOj1KjSeVsS8GYVHnCsqYB3vgvX0WCEB5vgt7HhZkM7aVOXdbuz9BqgHsPOQU4j18GEEofqcs15wB31_s4MlhN_P07GGBU3eQA_HpcR4DCyP_PahM1etaQYVoUgvk_4kUkLKoy-QRnFaJrSI6Nke5ZlGKTjZD2OTir099_ltUd9SACWg80cFuK8NRq_Zgqt"
+    { src: "/lansdowne-3.jpeg", alt: "Red Roof Resort — Resort overview with cottages and mountains", category: "Lansdowne" },
+    { src: "/lansdowne-7.jpeg", alt: "Red Roof Resort — Stunning night panoramic view", category: "Lansdowne" },
+    { src: "/lansdowne-4.jpeg", alt: "Red Roof Resort — Building exterior and corridor", category: "Lansdowne" },
+    { src: "/lansdowne-9.jpeg", alt: "Red Roof Resort — Aerial view of green roof cottages", category: "Lansdowne" },
+    { src: "/lansdowne-1.jpeg", alt: "Red Roof Resort — Mountain walkway view", category: "Lansdowne" },
+    { src: "/lansdowne-12.jpeg", alt: "Red Roof Resort — Garden lawn with mountain backdrop", category: "Lansdowne" },
+    { src: "/lansdowne-5.jpeg", alt: "Red Roof Resort — Full resort view", category: "Lansdowne" },
+    { src: "/lansdowne-6.jpeg", alt: "Red Roof Resort — Wide resort panoramic view", category: "Lansdowne" },
+    { src: "/lansdowne-2.jpeg", alt: "Red Roof Resort — Building exterior with seating", category: "Lansdowne" },
+    { src: "/lansdowne-8.jpeg", alt: "Red Roof Resort — Night view with colorful lights", category: "Lansdowne" },
+    { src: "/lansdowne-11.jpeg", alt: "Red Roof Resort — Night distant panoramic", category: "Lansdowne" },
+    { src: "/lansdowne-10.jpeg", alt: "Red Roof Resort — Night close-up", category: "Lansdowne" },
+    { src: "/lansdowne-13.jpeg", alt: "Red Roof Resort — Night wide view", category: "Lansdowne" },
 ];
 
 export default function GalleryPage() {
+    const [lightbox, setLightbox] = useState<number | null>(null);
+
     return (
         <div className="relative flex flex-col min-h-screen w-full overflow-x-hidden bg-background-offwhite">
-            <div className="pt-32 pb-16 px-6 text-center">
-                <motion.h1 
-                    className="font-serif text-5xl md:text-7xl text-text-main mb-6"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                >
-                    Gallery
-                </motion.h1>
-                <p className="text-text-muted text-lg font-light tracking-widest uppercase">Discover the ATHEVA Experience</p>
+            {/* Hero Header */}
+            <div className="relative w-full h-[40vh] min-h-[300px]">
+                <div className="absolute inset-0 bg-black/50 z-10" />
+                <img src="/lansdowne-7.jpeg" alt="ATHEVA Gallery" className="absolute inset-0 w-full h-full object-cover" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center z-20 pt-20">
+                    <motion.h1 
+                        className="font-serif text-5xl md:text-7xl text-white mb-4 drop-shadow-md"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                    >
+                        Gallery
+                    </motion.h1>
+                    <p className="text-white/80 text-lg font-light tracking-widest uppercase">Discover the ATHEVA Experience</p>
+                </div>
             </div>
 
-            <section className="pb-24 px-6 md:px-12 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
+                {/* Masonry-style Gallery */}
+                <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
                     {GALLERY_IMAGES.map((img, i) => (
                         <motion.div 
                             key={i}
-                            className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700 cursor-pointer group"
+                            className="relative rounded-sm overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700 cursor-pointer group break-inside-avoid"
                             variants={fadeInUp}
                             initial="initial"
                             whileInView="whileInView"
+                            onClick={() => setLightbox(i)}
                         >
                             <img 
-                                src={img} 
-                                alt={`Gallery image ${i + 1}`} 
-                                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                src={img.src} 
+                                alt={img.alt} 
+                                className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span className="text-white text-xs font-bold tracking-widest uppercase">{img.category}</span>
+                            </div>
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span className="material-symbols-outlined text-white text-3xl drop-shadow-lg">zoom_in</span>
+                            </div>
                         </motion.div>
                     ))}
                 </div>
             </section>
+
+            {/* Lightbox */}
+            <AnimatePresence>
+                {lightbox !== null && (
+                    <motion.div 
+                        className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setLightbox(null)}
+                    >
+                        <motion.img 
+                            src={GALLERY_IMAGES[lightbox].src}
+                            alt={GALLERY_IMAGES[lightbox].alt}
+                            className="max-w-full max-h-[90vh] object-contain rounded-sm shadow-2xl"
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.8, opacity: 0 }}
+                            onClick={(e) => e.stopPropagation()}
+                        />
+                        <button 
+                            className="absolute top-6 right-6 text-white/80 hover:text-white transition-colors"
+                            onClick={() => setLightbox(null)}
+                        >
+                            <span className="material-symbols-outlined text-4xl">close</span>
+                        </button>
+                        {lightbox > 0 && (
+                            <button 
+                                className="absolute left-6 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors"
+                                onClick={(e) => { e.stopPropagation(); setLightbox(lightbox - 1); }}
+                            >
+                                <span className="material-symbols-outlined text-5xl">chevron_left</span>
+                            </button>
+                        )}
+                        {lightbox < GALLERY_IMAGES.length - 1 && (
+                            <button 
+                                className="absolute right-6 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors"
+                                onClick={(e) => { e.stopPropagation(); setLightbox(lightbox + 1); }}
+                            >
+                                <span className="material-symbols-outlined text-5xl">chevron_right</span>
+                            </button>
+                        )}
+                        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 text-sm">
+                            {lightbox + 1} / {GALLERY_IMAGES.length}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }

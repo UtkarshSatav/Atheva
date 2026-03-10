@@ -18,7 +18,7 @@ export default function BhimtalPage() {
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-black/40 z-10" />
                     <img 
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmCfOAVvbFJmKjF9m40j5Hp3g7APP5nIXFcvz4kjpQXOxTRYz5cWREjQiwuVe3MRHIaEJ8Lxza-_QoQ31R0_qxs9eDaKfz9s46kiouYs0RBzNaIdDl8UqApw9DoJOXRQKk9UhYAvDOhEu7QWj9sx7wNwmCy2JVUEmW0Wuf2h2fkFlqmQJoMuWtqr1LOzz4e9k9ieTXEMs_50K3ko8l3awi-YRSOeRRekp1J2hP5Ijx2EhEVBm1sbxsPlj3UnaMLGDa3NLHX-dpIJQY" 
+                        src="/lansdowne-5.jpeg" 
                         alt="ATHEVA Bhimtal" 
                         className="w-full h-full object-cover"
                     />
@@ -63,8 +63,8 @@ export default function BhimtalPage() {
                         whileInView={{ opacity: 1, scale: 1 }}
                     >
                         <img 
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmCfOAVvbFJmKjF9m40j5Hp3g7APP5nIXFcvz4kjpQXOxTRYz5cWREjQiwuVe3MRHIaEJ8Lxza-_QoQ31R0_qxs9eDaKfz9s46kiouYs0RBzNaIdDl8UqApw9DoJOXRQKk9UhYAvDOhEu7QWj9sx7wNwmCy2JVUEmW0Wuf2h2fkFlqmQJoMuWtqr1LOzz4e9k9ieTXEMs_50K3ko8l3awi-YRSOeRRekp1J2hP5Ijx2EhEVBm1sbxsPlj3UnaMLGDa3NLHX-dpIJQY" 
-                            alt="Bhimtal Scenery" 
+                            src="/lansdowne-6.jpeg" 
+                            alt="Bhimtal Resort View" 
                             className="w-full h-full object-cover"
                         />
                     </motion.div>

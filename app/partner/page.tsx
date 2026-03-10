@@ -18,7 +18,7 @@ export default function PartnerPage() {
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-black/50 z-10" />
                     <img 
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCxFs6UlYnBlNvQA-BkqHTGD6QvYfT8nxGIkNzeLwu22HqKALeXjCTQ4AnQqGsPVLiPKg8H_ZL875_EMjAGJrLE4xW_oq8R2Ihm-DfiypSzvXQrHxMfMtP0nR-0YSND_y9aRPg5EuuNQRBa0V958i2US79zjm4uJ5zeaeWJydOkd_0B_oausxS-lxxW2mEngJ7LO0vIZOOEuV0EtOqlUE9hZ2kVUOMaEydPkNvojyAg7IJLNsYUuxPnsSihDsHZbdiavJo6txaNGZ_" 
+                        src="/lansdowne-9.jpeg" 
                         alt="Partner With Us" 
                         className="w-full h-full object-cover"
                     />

@@ -12,14 +12,6 @@ import { useRouter } from "next/navigation";
 const CITIES = [
     { id: "bhimtal", name: "Bhimtal" },
     { id: "lansdowne", name: "Lansdowne" },
-    { id: "agra", name: "Agra" },
-    { id: "ajmer", name: "Ajmer" },
-    { id: "ambala", name: "Ambala" },
-    { id: "amritsar", name: "Amritsar" },
-    { id: "ayodhya", name: "Ayodhya" },
-    { id: "bhowali", name: "Bhowali" },
-    { id: "dehradun", name: "Dehradun" },
-    { id: "mussoorie", name: "Mussoorie" },
 ];
 
 const PROPERTIES: Record<string, { id: string, name: string }[]> = {
@@ -27,35 +19,7 @@ const PROPERTIES: Record<string, { id: string, name: string }[]> = {
         { id: "bhimtal-1", name: "ATHEVA Bhimtal" },
     ],
     "lansdowne": [
-        { id: "lansdowne-1", name: "ATHEVA Lansdowne" },
-    ],
-    "agra": [
-        { id: "agra-1", name: "Bhawna Clarks Inn" },
-        { id: "agra-2", name: "Clarks Inn Suites" },
-        { id: "agra-3", name: "Neel Clarks Inn Express" },
-    ],
-    "ajmer": [
-        { id: "ajmer-1", name: "Clarks Collection Grand Sapphire" },
-        { id: "ajmer-2", name: "Clarks Resort, Ajmer" },
-    ],
-    "ambala": [
-        { id: "ambala-1", name: "Clarks Inn, Ambala" },
-    ],
-    "amritsar": [
-        { id: "amritsar-1", name: "Bharawan Clarks Inn Express" },
-        { id: "amritsar-2", name: "HK Clarks Inn" },
-    ],
-    "ayodhya": [
-        { id: "ayodhya-1", name: "Clarks Inn Express, Ayodhya" },
-    ],
-    "bhowali": [
-        { id: "bhowali-1", name: "Clarks Inn, Near Kainchi Dham" },
-    ],
-    "dehradun": [
-        { id: "dehradun-1", name: "Clarks Inn Express, Dehradun" },
-    ],
-    "mussoorie": [
-        { id: "mussoorie-1", name: "Starz Clarks Inn, Mussoorie" },
+        { id: "lansdowne-1", name: "Red Roof Resort, Lansdowne" },
     ],
 };
 

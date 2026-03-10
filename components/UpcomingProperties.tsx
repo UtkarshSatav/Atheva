@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -48,58 +49,62 @@ export default function UpcomingProperties() {
                 >
                     {/* Property 1: Bhimtal */}
                     <motion.div variants={fadeInUp} className="group cursor-pointer">
-                        <div className="relative aspect-[4/3] rounded-sm overflow-hidden mb-6 shadow-lg border border-border-subtle">
-                            <img 
-                                src="/bhimtal-resort.png" 
-                                alt="Atheva, Bhimtal" 
-                                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
-                            <div className="absolute top-4 left-4 bg-primary-gold text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-sm shadow-sm backdrop-blur-md">
-                                Coming Soon
-                            </div>
-                            <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-                                <h3 className="text-white font-serif text-3xl font-medium drop-shadow-md">Atheva</h3>
-                                <div className="size-10 rounded-full border border-white/40 flex items-center justify-center backdrop-blur-md group-hover:bg-primary-gold group-hover:border-primary-gold transition-colors text-white">
-                                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                        <Link href="/destinations/bhimtal">
+                            <div className="relative aspect-[4/3] rounded-sm overflow-hidden mb-6 shadow-lg border border-border-subtle">
+                                <img 
+                                    src="/bhimtal-resort.png" 
+                                    alt="Atheva, Bhimtal" 
+                                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                                <div className="absolute top-4 left-4 bg-primary-gold text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-sm shadow-sm backdrop-blur-md">
+                                    Coming Soon
+                                </div>
+                                <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                                    <h3 className="text-white font-serif text-3xl font-medium drop-shadow-md">Atheva</h3>
+                                    <div className="size-10 rounded-full border border-white/40 flex items-center justify-center backdrop-blur-md group-hover:bg-primary-gold group-hover:border-primary-gold transition-colors text-white">
+                                        <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="flex items-center gap-2 text-primary-gold mb-3">
-                            <span className="material-symbols-outlined text-lg">location_on</span>
-                            <span className="text-xs uppercase tracking-widest font-bold">Bhimtal, Uttarakhand</span>
-                        </div>
-                        <p className="text-text-muted font-light leading-relaxed line-clamp-3">
-                            A serene lakeside sanctuary offering holistic wellness, luxurious cottage accommodations, and unparalleled views of the pristine Bhimtal lake. Reconnect with nature in absolute comfort.
-                        </p>
+                            <div className="flex items-center gap-2 text-primary-gold mb-3">
+                                <span className="material-symbols-outlined text-lg">location_on</span>
+                                <span className="text-xs uppercase tracking-widest font-bold">Bhimtal, Uttarakhand</span>
+                            </div>
+                            <p className="text-text-muted font-light leading-relaxed line-clamp-3">
+                                A serene lakeside sanctuary offering holistic wellness, luxurious cottage accommodations, and unparalleled views of the pristine Bhimtal lake. Reconnect with nature in absolute comfort.
+                            </p>
+                        </Link>
                     </motion.div>
 
                     {/* Property 2: Lansdowne */}
                     <motion.div variants={fadeInUp} className="group cursor-pointer">
-                        <div className="relative aspect-[4/3] rounded-sm overflow-hidden mb-6 shadow-lg border border-border-subtle">
-                            <img 
-                                src="/lansdowne-retreat.png" 
-                                alt="Atheva, Lansdowne" 
-                                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
-                            <div className="absolute top-4 left-4 bg-primary-gold text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-sm shadow-sm backdrop-blur-md">
-                                Coming Soon
-                            </div>
-                            <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-                                <h3 className="text-white font-serif text-3xl font-medium drop-shadow-md">Atheva</h3>
-                                <div className="size-10 rounded-full border border-white/40 flex items-center justify-center backdrop-blur-md group-hover:bg-primary-gold group-hover:border-primary-gold transition-colors text-white">
-                                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                        <Link href="/destinations/lansdowne">
+                            <div className="relative aspect-[4/3] rounded-sm overflow-hidden mb-6 shadow-lg border border-border-subtle">
+                                <img 
+                                    src="/lansdowne-7.jpeg" 
+                                    alt="Atheva, Lansdowne" 
+                                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                                <div className="absolute top-4 left-4 bg-primary-gold text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-sm shadow-sm backdrop-blur-md">
+                                    Coming Soon
+                                </div>
+                                <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                                    <h3 className="text-white font-serif text-3xl font-medium drop-shadow-md">Atheva</h3>
+                                    <div className="size-10 rounded-full border border-white/40 flex items-center justify-center backdrop-blur-md group-hover:bg-primary-gold group-hover:border-primary-gold transition-colors text-white">
+                                        <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="flex items-center gap-2 text-primary-gold mb-3">
-                            <span className="material-symbols-outlined text-lg">location_on</span>
-                            <span className="text-xs uppercase tracking-widest font-bold">Lansdowne, Uttarakhand</span>
-                        </div>
-                        <p className="text-text-muted font-light leading-relaxed line-clamp-3">
-                            Elevate your senses at our exclusive mountain retreat. Nestled amongst dense pine forests, experience heritage luxury, cool mountain breezes, and panoramic Himalayan vistas.
-                        </p>
+                            <div className="flex items-center gap-2 text-primary-gold mb-3">
+                                <span className="material-symbols-outlined text-lg">location_on</span>
+                                <span className="text-xs uppercase tracking-widest font-bold">Lansdowne, Uttarakhand</span>
+                            </div>
+                            <p className="text-text-muted font-light leading-relaxed line-clamp-3">
+                                Elevate your senses at our exclusive mountain retreat. Nestled amongst dense pine forests, experience heritage luxury, cool mountain breezes, and panoramic Himalayan vistas.
+                            </p>
+                        </Link>
                     </motion.div>
                 </motion.div>
             </div>

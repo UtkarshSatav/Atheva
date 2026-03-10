@@ -16,14 +16,14 @@ const DESTINATIONS = [
         id: "bhimtal",
         name: "ATHEVA Bhimtal",
         desc: "A serene lakeside destination surrounded by the beauty of the Kumaon hills.",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCmCfOAVvbFJmKjF9m40j5Hp3g7APP5nIXFcvz4kjpQXOxTRYz5cWREjQiwuVe3MRHIaEJ8Lxza-_QoQ31R0_qxs9eDaKfz9s46kiouYs0RBzNaIdDl8UqApw9DoJOXRQKk9UhYAvDOhEu7QWj9sx7wNwmCy2JVUEmW0Wuf2h2fkFlqmQJoMuWtqr1LOzz4e9k9ieTXEMs_50K3ko8l3awi-YRSOeRRekp1J2hP5Ijx2EhEVBm1sbxsPlj3UnaMLGDa3NLHX-dpIJQY",
+        image: "/lansdowne-5.jpeg",
         link: "/destinations/bhimtal"
     },
     {
         id: "lansdowne",
         name: "ATHEVA Lansdowne",
-        desc: "A peaceful retreat nestled within the forests and mountains of Uttarakhand.",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDymQx_o-WJ7SBegaTFGei8Yf-b5B-dbfAYYhFn434nW2QVwSl3g3Y9XZTezgrNuvdd6dRLl8hlx336U-ChJ5GxTel8anDsv6_hPSYLlhNloxFDRbsPbYevKSdDQ_KZQy4kuy2HWlZFwnpRx5tH7mBJASXOvkubonNZ0AW0QsDZ7gKDIggOXLv-m6yULaecyBY3S6g7lwVIlACTUMnt9i-3zGw0ak6qta9B52qkpW4JBgQoxUzZuBng6t0l4cGF3ZFzD55z-KeYsl11",
+        desc: "Red Roof Resort — A peaceful retreat nestled within the forests and mountains of Uttarakhand.",
+        image: "/lansdowne-3.jpeg",
         link: "/destinations/lansdowne"
     }
 ];
@@ -34,7 +34,7 @@ export default function DestinationsPage() {
             {/* Hero Header */}
             <div className="relative w-full h-[40vh] min-h-[300px]">
                 <div className="absolute inset-0 bg-black/40 z-10" />
-                <div className="absolute inset-0 bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmCfOAVvbFJmKjF9m40j5Hp3g7APP5nIXFcvz4kjpQXOxTRYz5cWREjQiwuVe3MRHIaEJ8Lxza-_QoQ31R0_qxs9eDaKfz9s46kiouYs0RBzNaIdDl8UqApw9DoJOXRQKk9UhYAvDOhEu7QWj9sx7wNwmCy2JVUEmW0Wuf2h2fkFlqmQJoMuWtqr1LOzz4e9k9ieTXEMs_50K3ko8l3awi-YRSOeRRekp1J2hP5Ijx2EhEVBm1sbxsPlj3UnaMLGDa3NLHX-dpIJQY')] bg-cover bg-center" />
+                <div className="absolute inset-0 bg-[url('/lansdowne-7.jpeg')] bg-cover bg-center" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center z-20 pt-20">
                     <motion.h1 
                         className="text-4xl md:text-6xl font-serif text-white drop-shadow-md"

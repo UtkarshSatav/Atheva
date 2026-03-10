@@ -49,7 +49,6 @@ export default function Navbar() {
                     {[
                         { label: "Home", href: "/" },
                         { label: "About ATHEVA", href: "/about" },
-                        { label: "Destinations", href: "/destinations" },
                         { label: "Experiences", href: "/experiences" },
                         { label: "Partner With Us", href: "/partner" },
                         { label: "Gallery", href: "/gallery" },

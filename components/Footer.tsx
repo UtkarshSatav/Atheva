@@ -58,7 +58,6 @@ export default function Footer() {
                     </h3>
                     <ul className="flex flex-col gap-4">
                         <li><Link className="text-gray-400 hover:text-primary-gold transition-colors text-sm font-light tracking-wide" href="/about">About Us</Link></li>
-                        <li><Link className="text-gray-400 hover:text-primary-gold transition-colors text-sm font-light tracking-wide" href="/destinations">Destinations</Link></li>
                         <li><Link className="text-gray-400 hover:text-primary-gold transition-colors text-sm font-light tracking-wide" href="/experiences">Experiences</Link></li>
                         <li><Link className="text-gray-400 hover:text-primary-gold transition-colors text-sm font-light tracking-wide" href="/partner">Partner With Us</Link></li>
                         <li><Link className="text-gray-400 hover:text-primary-gold transition-colors text-sm font-light tracking-wide" href="/gallery">Gallery</Link></li>

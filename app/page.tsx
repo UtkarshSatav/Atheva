@@ -45,7 +45,7 @@ export default function Home() {
             className="w-full h-full bg-cover bg-center animate-kenburns brightness-110 saturate-[0.8]"
             style={{
               backgroundImage:
-                "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmCfOAVvbFJmKjF9m40j5Hp3g7APP5nIXFcvz4kjpQXOxTRYz5cWREjQiwuVe3MRHIaEJ8Lxza-_QoQ31R0_qxs9eDaKfz9s46kiouYs0RBzNaIdDl8UqApw9DoJOXRQKk9UhYAvDOhEu7QWj9sx7wNwmCy2JVUEmW0Wuf2h2fkFlqmQJoMuWtqr1LOzz4e9k9ieTXEMs_50K3ko8l3awi-YRSOeRRekp1J2hP5Ijx2EhEVBm1sbxsPlj3UnaMLGDa3NLHX-dpIJQY')",
+                "url('/lansdowne-7.jpeg')",
             }}
           ></div>
         </motion.div>
@@ -115,15 +115,15 @@ export default function Home() {
           >
             <div className="aspect-[3/4] rounded-sm overflow-hidden translate-y-8 shadow-2xl transition-transform hover:scale-105 duration-700">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuGOW54kq93PQPjpWW75tGZjgo9tliGopgu8y-7O6oj4oL0C-lyIMcRyEtYkjcPP5HKZM9_s6iEnJ3F3OpyAxLDSyptX6PUmZmakcICoFV125fIY-2O0RMHa3aPJ52O2tsybYpTG1edxuJ4Blj90PW4YWCsmsAKnaf6rZ3o4HV2aM6YA3h5V9aeSwYJsHob-Wysbwqmzapif5Y1Oxm_BMktcPliY41cMiZHA7z8uRsk7C8C7JCn-kwcigdvFBDp6FgKvy-UxoM7jzl"
-                alt="Elegant waiter"
+                src="/lansdowne-4.jpeg"
+                alt="ATHEVA Lansdowne Resort"
                 className="w-full h-full object-cover grayscale-[20%]"
               />
             </div>
             <div className="aspect-[3/4] rounded-sm overflow-hidden -translate-y-8 shadow-2xl transition-transform hover:scale-105 duration-700">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDymQx_o-WJ7SBegaTFGei8Yf-b5B-dbfAYYhFn434nW2QVwSl3g3Y9XZTezgrNuvdd6dRLl8hlx336U-ChJ5GxTel8anDsv6_hPSYLlhNloxFDRbsPbYevKSdDQ_KZQy4kuy2HWlZFwnpRx5tH7mBJASXOvkubonNZ0AW0QsDZ7gKDIggOXLv-m6yULaecyBY3S6g7lwVIlACTUMnt9i-3zGw0ak6qta9B52qkpW4JBgQoxUzZuBng6t0l4cGF3ZFzD55z-KeYsl11"
-                alt="Modern architecture"
+                src="/lansdowne-3.jpeg"
+                alt="ATHEVA Resort Mountain View"
                 className="w-full h-full object-cover grayscale-[20%]"
               />
             </div>
@@ -196,19 +196,19 @@ export default function Home() {
                 title: "Boutique Stays",
                 desc: "Comfortable and elegant rooms designed to offer a stay that feels both memorable and meaningful.",
                 icon: "hotel",
-                img: "/boutique-stay.png",
+                img: "/lansdowne-2.jpeg",
               },
               {
                 title: "Weddings & Celebrations",
                 desc: "A beautiful venue for life's most meaningful moments, from destination weddings to family gatherings.",
                 icon: "favorite",
-                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCCxFs6UlYnBlNvQA-BkqHTGD6QvYfT8nxGIkNzeLwu22HqKALeXjCTQ4AnQqGsPVLiPKg8H_ZL875_EMjAGJrLE4xW_oq8R2Ihm-DfiypSzvXQrHxMfMtP0nR-0YSND_y9aRPg5EuuNQRBa0V958i2US79zjm4uJ5zeaeWJydOkd_0B_oausxS-lxxW2mEngJ7LO0vIZOOEuV0EtOqlUE9hZ2kVUOMaEydPkNvojyAg7IJLNsYUuxPnsSihDsHZbdiavJo6txaNGZ_",
+                img: "/lansdowne-12.jpeg",
               },
               {
                 title: "Corporate Retreats",
                 desc: "An ideal setting for team retreats and leadership meetings, where ideas and inspiration meet.",
                 icon: "business",
-                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAx8osFPriDVOKiMmFHnTyLTNRAzAsQQ5WbWD849Kv2-lA0pVNDwnYzH6MQCi0dvk9v9PN40JE1j0vlEmOj1KjSeVsS8GYVHnCsqYB3vgvX0WCEB5vgt7HhZkM7aVOXdbuz9BqgHsPOQU4j18GEEofqcs15wB31_s4MlhN_P07GGBU3eQA_HpcR4DCyP_PahM1etaQYVoUgvk_4kUkLKoy-QRnFaJrSI6Nke5ZlGKTjZD2OTir099_ltUd9SACWg80cFuK8NRq_Zgqt",
+                img: "/lansdowne-6.jpeg",
               },
             ].map((item, i) => (
               <motion.div
@@ -302,7 +302,7 @@ export default function Home() {
                 {...fadeInUp}
             >
                 <img 
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCxFs6UlYnBlNvQA-BkqHTGD6QvYfT8nxGIkNzeLwu22HqKALeXjCTQ4AnQqGsPVLiPKg8H_ZL875_EMjAGJrLE4xW_oq8R2Ihm-DfiypSzvXQrHxMfMtP0nR-0YSND_y9aRPg5EuuNQRBa0V958i2US79zjm4uJ5zeaeWJydOkd_0B_oausxS-lxxW2mEngJ7LO0vIZOOEuV0EtOqlUE9hZ2kVUOMaEydPkNvojyAg7IJLNsYUuxPnsSihDsHZbdiavJo6txaNGZ_" 
+                    src="/lansdowne-9.jpeg" 
                     alt="CHOWK Ecosystem" 
                     className="rounded-sm shadow-2xl grayscale-[20%]"
                 />
@@ -366,12 +366,8 @@ export default function Home() {
                   made our gala night unforgettable. ATHEVA truly defines luxury."
                 </h3>
             <div className="flex items-center gap-5">
-                  <div className="w-14 h-14 rounded-full bg-gray-200 overflow-hidden shadow-md ring-2 ring-primary-gold/20">
-                    <img
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYNhVqR-WmyshUO9blSf8vU1k1JTYPZtho8XTMmUGDW9fjEY8qSBDAdzXZLb0XtfXUsfiO8TmYGurY5dJn0YEe0ZAqNSkuNOlLlywijzT-k99rKA-jlAxvalYx_Tjx97L3TeGuzf_yIvaHUfhHA5ByM15a6l9bxWFObuU8wYSdXKaTlTqGVEIBDHid6PXBjjCnuVa3eN9JEHDAJJa7tnLKpUippNLrmm99iAembxwxaiarT85-u5B9vLunnNHWveWFKKjRU6ClqauM"
-                      alt="Sarah Jenkins"
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="w-14 h-14 rounded-full bg-primary-gold/20 overflow-hidden shadow-md ring-2 ring-primary-gold/20 flex items-center justify-center">
+                    <span className="text-primary-gold font-serif text-xl font-bold">SJ</span>
                   </div>
                   <div>
                     <p className="text-text-main font-bold text-lg font-serif">Sarah Jenkins</p>
@@ -391,8 +387,8 @@ export default function Home() {
             >
               <div className="relative w-full max-w-sm aspect-[3/4] md:aspect-square rounded-sm overflow-hidden border-[8px] border-white shadow-2xl hover:rotate-0 transition-transform duration-700">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm6An_FGopcgbBJyWbaZStIuP2RxepKDWI11Q-KNTU4uYxcygSssIxTsJpFPPlnbw9jhxzjHvs_4gESaWCkrtgg5eN55_85Uea7IATdgo7obD9BIh9xpfbS7ePmm7tIsb4wp1wE82Vtnm8hno6mRtquzzbO7_JL0NJU3fpbq2yCz2vWLQobxbpsbKBt_XIvn7AO2uUcjsLUeq22X-5Uq-4xFXyILV1qBtS5BllX1ajKApsi86z_jesUKZay35FxxXJZhEQMn6EwDxz"
-                  alt="Elegant event"
+                  src="/lansdowne-11.jpeg"
+                  alt="ATHEVA Resort Night View"
                   className="w-full h-full object-cover"
                 />
               </div>

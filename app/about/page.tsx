@@ -47,19 +47,19 @@ const LEADERSHIP = [
     {
         name: "Eleanor Sterling",
         role: "Founder & CEO",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDCn1uycBfkz3vKDEPBEJvigqYOTl1luhGml53EJ4LRq5f3D4XjNiutK5Q0NPBh70wk6W6cAXlStdV7XsoDZMMKCOZdRLXLjqGLMLyqQroA-8pP314yisWqsn5SREuNBNqDPE6VLX_xU1msPzCRAtW0t4zJkRwt8sIcUEakSqcXkcYdPYLyhJiX_yzBknoi8qLqkWozQxMEU83u_qY7Db1g4MPut1hZ4t8z1dWc5Z1XU_wjYhIkO5TlC1eg3KvUww47jTraAew6Icue", // Placeholder - please provide team images if needed later
+        image: "/lansdowne-4.jpeg",
         bio: "With over two decades in luxury hospitality, Eleanor founded Atheva to redefine the benchmark for premium celebrations."
     },
     {
         name: "Marcus Vance",
         role: "Director of Operations",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC-7JjVZu0TDbK4kzdUn_kyjh59qxYsE5c4IsaeeH77Bpkf_haXkepRbkLSTV-1FHmrSWHJ6tmxjn-bPcH3tYm_lJnK55sXBq7x4lbhMtBaL4dPLkDyRreBA83xpuvR-YE2ewMgrLGOZeBIZEZZWebt_QZQTp-1oEJZZWJUNtdJmI_SqnNIIEZnaU0BM9UNHn6-1lCt57C6bCbJwVWU3btpP4enBARSD30VcH3Ksee8pIYMybrE-DgmrzXyyJzotTufGkrvwYsXfFp1", // Placeholder
+        image: "/lansdowne-9.jpeg",
         bio: "Marcus ensures that every venue operates flawlessly, maintaining the strict standards of the Atheva brand."
     },
     {
         name: "Isabella Thorne",
         role: "Head of Guest Experience",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCBt0ih77ryHmwxBf9V88plinA73HQL9Yn-Dld-oQZonWSi0J87K3SGFi0DKGNsVEggzeA1d7dzqE-CpP_jLvoQjSdRuOZeD774kGf8jLH4tyAzaZ3YTKOjpkUMLvErnU_jKv-G6v_U_J7YA24q67hwHrKrTRqAjHthrxDRMnGGlN5atKJcxSoKFq63RB4O9DdmoMm1cy9-lKnvpvQdgkedI060oZkmZHXoK5F6fCl6hHsnbhTo4Ko6xCrKN3SOXDTVSBgy87T7y84t", // Placeholder
+        image: "/lansdowne-12.jpeg",
         bio: "Isabella curates the moments that turn a simple stay into a deeply personal, unforgettable narrative."
     }
 ];
@@ -125,7 +125,7 @@ export default function AboutPage() {
                         transition={{ duration: 0.8 }}
                     >
                         <img 
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDymQx_o-WJ7SBegaTFGei8Yf-b5B-dbfAYYhFn434nW2QVwSl3g3Y9XZTezgrNuvdd6dRLl8hlx336U-ChJ5GxTel8anDsv6_hPSYLlhNloxFDRbsPbYevKSdDQ_KZQy4kuy2HWlZFwnpRx5tH7mBJASXOvkubonNZ0AW0QsDZ7gKDIggOXLv-m6yULaecyBY3S6g7lwVIlACTUMnt9i-3zGw0ak6qta9B52qkpW4JBgQoxUzZuBng6t0l4cGF3ZFzD55z-KeYsl11" 
+                            src="/lansdowne-3.jpeg" 
                             alt="Atheva Historic Architecture" 
                             className="w-full h-full object-cover grayscale-[10%]"
                         />
@@ -228,7 +228,7 @@ export default function AboutPage() {
 
             {/* Final CTA */}
             <section className="py-24 px-6 bg-text-main text-white text-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCn1uycBfkz3vKDEPBEJvigqYOTl1luhGml53EJ4LRq5f3D4XjNiutK5Q0NPBh70wk6W6cAXlStdV7XsoDZMMKCOZdRLXLjqGLMLyqQroA-8pP314yisWqsn5SREuNBNqDPE6VLX_xU1msPzCRAtW0t4zJkRwt8sIcUEakSqcXkcYdPYLyhJiX_yzBknoi8qLqkWozQxMEU83u_qY7Db1g4MPut1hZ4t8z1dWc5Z1XU_wjYhIkO5TlC1eg3KvUww47jTraAew6Icue')] bg-cover bg-center opacity-10"></div>
+                <div className="absolute inset-0 bg-[url('/lansdowne-7.jpeg')] bg-cover bg-center opacity-10"></div>
                 <motion.div 
                     className="max-w-3xl mx-auto relative z-10"
                     {...fadeInUp}

@@ -28,7 +28,7 @@ export default function ExperiencesPage() {
                     className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
                     style={{
                         backgroundImage:
-                            "url('https://lh3.googleusercontent.com/aida-public/AB6AXuASzcq-Q-IFgvL0VJzCwoAmUYu1tE-h9WzBspt-moDMK1vsXr--8vxWvy3nEPSQhOJuBz8P3o4_BxWn3IiyzCvXXvhARCtLtEA88YZFIPr8Ak8eNHzMkbDnHvCh4Jqo5y8Ri8XyC4s8UjTs3sddmEwzNKByfg3KQ7zqRbiNmWXxmAHh7UvVWc1uiTXi8AJfMhcUKSWV4T6oU1DpYfNFbp_tTO6JBHV-Wjjb35q2mK0u5rjWX_uDOUhTWZbLMF1YUEPphktdHR0dOlq2')",
+                            "url('/lansdowne-3.jpeg')",
                     }}
                     initial={{ scale: 1.1 }}
                     animate={{ scale: 1 }}
@@ -106,21 +106,21 @@ export default function ExperiencesPage() {
                                 subtitle: "A Stay That Feels Personal",
                                 desc: "ATHEVA destinations are designed as boutique hospitality retreats, offering guests an experience that feels both intimate and memorable. Unlike large hotels, ATHEVA properties focus on personalized hospitality, peaceful environments, and thoughtfully designed spaces.",
                                 icon: "hotel",
-                                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCyULf2jUDCHqEEu0bqEj_Vofjdnt8Zx2aMajZzQzYGX3MS8JWSDAOPm0-zxQI_4kDYrNUay4vg22MQUesIuLEVEgnJseAX2ct_ZfcVXnLy7keNzkKYQO0Pg42HfaLHZfz3BlAmihW9CIK85CgsckdvVHiAfmTw98MPOHoutwCYtTvb2CyUb3KFx66m49fclRgQnmwqxb2kq26fZ-yJDq61o1E6C5H3z8cCk_XJw9TJ2JyUqF6DHC3uPDa-My7fNNLvFHII1WgQRIM"
+                                img: "/lansdowne-2.jpeg"
                             },
                             {
                                 title: "Weddings & Celebrations",
                                 subtitle: "Celebrate Life's Most Meaningful Moments",
                                 desc: "ATHEVA destinations are designed to host beautiful and memorable celebrations. From destination weddings to family gatherings, each property offers elegant venues and warm hospitality that create unforgettable moments.",
                                 icon: "favorite",
-                                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCCxFs6UlYnBlNvQA-BkqHTGD6QvYfT8nxGIkNzeLwu22HqKALeXjCTQ4AnQqGsPVLiPKg8H_ZL875_EMjAGJrLE4xW_oq8R2Ihm-DfiypSzvXQrHxMfMtP0nR-0YSND_y9aRPg5EuuNQRBa0V958i2US79zjm4uJ5zeaeWJydOkd_0B_oausxS-lxxW2mEngJ7LO0vIZOOEuV0EtOqlUE9hZ2kVUOMaEydPkNvojyAg7IJLNsYUuxPnsSihDsHZbdiavJo6txaNGZ_"
+                                img: "/lansdowne-12.jpeg"
                             },
                             {
                                 title: "Corporate Retreats",
                                 subtitle: "Where Ideas and Inspiration Meet",
                                 desc: "ATHEVA destinations offer a peaceful environment that is ideal for corporate retreats, leadership gatherings, and team offsite events. Away from the distractions of city life, guests can focus on collaboration and reflection.",
                                 icon: "groups",
-                                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAx8osFPriDVOKiMmFHnTyLTNRAzAsQQ5WbWD849Kv2-lA0pVNDwnYzH6MQCi0dvk9v9PN40JE1j0vlEmOj1KjSeVsS8GYVHnCsqYB3vgvX0WCEB5vgt7HhZkM7aVOXdbuz9BqgHsPOQU4j18GEEofqcs15wB31_s4MlhN_P07GGBU3eQA_HpcR4DCyP_PahM1etaQYVoUgvk_4kUkLKoy-QRnFaJrSI6Nke5ZlGKTjZD2OTir099_ltUd9SACWg80cFuK8NRq_Zgqt"
+                                img: "/lansdowne-6.jpeg"
                             }
                         ].map((exp, i) => (
                             <motion.div 
