@@ -28,14 +28,14 @@ export default function ExperiencesPage() {
                     className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
                     style={{
                         backgroundImage:
-                            "url('/lansdowne-3.jpeg')",
+                            "url('/asif-aether-_JbCkp6FehY-unsplash.jpg')",
                     }}
                     initial={{ scale: 1.1 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
                 >
                     <div className="absolute inset-0 bg-white/10 mix-blend-overlay"></div>
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-background-light"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-background-light"></div>
                 </motion.div>
                 <div className="relative z-10 container mx-auto px-4 text-center max-w-5xl flex flex-col items-center gap-8 mt-20">
                     <motion.span 

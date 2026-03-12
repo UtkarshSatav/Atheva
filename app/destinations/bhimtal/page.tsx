@@ -18,7 +18,7 @@ export default function BhimtalPage() {
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-black/40 z-10" />
                     <img 
-                        src="/lansdowne-5.jpeg" 
+                        src="/asif-aether-_JbCkp6FehY-unsplash.jpg" 
                         alt="ATHEVA Bhimtal" 
                         className="w-full h-full object-cover"
                     />

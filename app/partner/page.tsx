@@ -16,9 +16,9 @@ export default function PartnerPage() {
             {/* Hero Section */}
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-black/50 z-10" />
+                    <div className="absolute inset-0 bg-black/65 z-10" />
                     <img 
-                        src="/lansdowne-9.jpeg" 
+                        src="/asif-aether-_JbCkp6FehY-unsplash.jpg" 
                         alt="Partner With Us" 
                         className="w-full h-full object-cover"
                     />

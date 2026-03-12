@@ -39,13 +39,13 @@ export default function Home() {
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-background-offwhite/90 z-10"></div>
-          <div className="absolute inset-0 bg-black/10 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-background-offwhite/90 z-10"></div>
+          <div className="absolute inset-0 bg-black/20 z-10"></div>
           <div
             className="w-full h-full bg-cover bg-center animate-kenburns brightness-110 saturate-[0.8]"
             style={{
               backgroundImage:
-                "url('/lansdowne-7.jpeg')",
+                "url('/hero_premium.png')",
             }}
           ></div>
         </motion.div>
@@ -70,7 +70,7 @@ export default function Home() {
             <span className="italic font-light text-white/90 text-4xl md:text-6xl lg:text-7xl block mt-4 whitespace-nowrap">Hospitality Meets Heart</span>
           </motion.h1>
           <motion.p 
-            className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8 font-light leading-relaxed drop-shadow-md"
+            className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-8 font-light leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}

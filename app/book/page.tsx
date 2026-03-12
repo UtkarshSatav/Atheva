@@ -76,9 +76,9 @@ function BookingForm() {
         <div className="min-h-screen bg-background-offwhite pb-24">
             {/* Hero Banner Section */}
             <div className="relative w-full h-[40vh] md:h-[50vh] min-h-[350px] mb-12">
-                <div className="absolute inset-0 bg-black/40 z-10" />
+                <div className="absolute inset-0 bg-black/65 z-10" />
                 <img 
-                    src="/lansdowne-7.jpeg" 
+                    src="/asif-aether-_JbCkp6FehY-unsplash.jpg" 
                     alt="Atheva Resort Booking" 
                     className="w-full h-full object-cover"
                 />

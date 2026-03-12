@@ -35,9 +35,9 @@ export default function LansdownePage() {
             {/* Hero Section */}
             <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-black/40 z-10" />
+                    <div className="absolute inset-0 bg-black/65 z-10" />
                     <img 
-                        src="/lansdowne-3.jpeg" 
+                        src="/asif-aether-_JbCkp6FehY-unsplash.jpg" 
                         alt="ATHEVA Lansdowne — Red Roof Resort" 
                         className="w-full h-full object-cover"
                     />

@@ -33,13 +33,13 @@ export default function VenuesPage() {
                     className="absolute inset-0 z-0 bg-cover bg-center"
                     style={{
                         backgroundImage:
-                            "url('/lansdowne-6.jpeg')",
+                            "url('/asif-aether-_JbCkp6FehY-unsplash.jpg')",
                     }}
                     initial={{ scale: 1.1 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
                 ></motion.div>
-                <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/20 via-black/10 to-white/90"></div>
+                <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/60 via-black/30 to-white/90"></div>
                 <div className="relative z-20 flex flex-col items-center text-center px-4 max-w-4xl mx-auto space-y-6 mt-12">
                     <motion.span 
                         className="text-primary-gold uppercase tracking-[0.2em] text-xs font-bold bg-white/90 px-4 py-1.5 rounded-sm shadow-sm backdrop-blur-sm"

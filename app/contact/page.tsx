@@ -30,11 +30,11 @@ export default function ContactPage() {
                     animate={{ scale: 1 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
                 >
-                    <div className="absolute inset-0 bg-black/40 z-10"></div>
+                    <div className="absolute inset-0 bg-black/65 z-10"></div>
                     <div
                         className="w-full h-full bg-cover bg-center"
                         style={{
-                            backgroundImage: "url('/contact-hero.png')",
+                            backgroundImage: "url('/asif-aether-_JbCkp6FehY-unsplash.jpg')",
                         }}
                     ></div>
                 </motion.div>

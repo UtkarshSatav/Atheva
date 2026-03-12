@@ -33,8 +33,8 @@ export default function DestinationsPage() {
         <div className="relative flex flex-col min-h-screen w-full overflow-x-hidden bg-background-offwhite">
             {/* Hero Header */}
             <div className="relative w-full h-[40vh] min-h-[300px]">
-                <div className="absolute inset-0 bg-black/40 z-10" />
-                <div className="absolute inset-0 bg-[url('/lansdowne-7.jpeg')] bg-cover bg-center" />
+                <div className="absolute inset-0 bg-black/65 z-10" />
+                <div className="absolute inset-0 bg-[url('/asif-aether-_JbCkp6FehY-unsplash.jpg')] bg-cover bg-center" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center z-20 pt-20">
                     <motion.h1 
                         className="text-4xl md:text-6xl font-serif text-white drop-shadow-md"
