@@ -8,8 +8,11 @@ export async function POST(req: Request) {
 
     // Check if configuration exists
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-      console.error('Email credentials missing in environment variables');
-      return NextResponse.json({ error: 'Email system not configured. Please set EMAIL_USER and EMAIL_PASS.' }, { status: 500 });
+      const missing = !process.env.EMAIL_USER ? 'EMAIL_USER' : 'EMAIL_PASS';
+      console.error(`Email credentials missing: ${missing}`);
+      return NextResponse.json({ 
+        error: `Email system not configured. Missing: ${missing}. Please check Vercel Environment Variables.` 
+      }, { status: 500 });
     }
 
     // Sanitize password (remove spaces if any)
