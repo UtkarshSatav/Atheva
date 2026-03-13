@@ -39,8 +39,9 @@ export default function Home() {
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-background-offwhite/90 z-10"></div>
-          <div className="absolute inset-0 bg-black/20 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-background-offwhite/80 z-10"></div>
+          <div className="absolute inset-0 bg-black/40 z-10"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_20%,rgba(0,0,0,0.4)_100%)] z-10"></div>
           <div
             className="w-full h-full bg-cover bg-center animate-kenburns brightness-110 saturate-[0.8]"
             style={{

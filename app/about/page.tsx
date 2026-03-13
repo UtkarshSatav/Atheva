@@ -69,7 +69,9 @@ export default function AboutPage() {
         <div className="relative flex flex-col min-h-screen w-full overflow-x-hidden bg-background-offwhite pb-24">
             {/* Hero Header */}
             <div className="relative w-full h-[50vh] min-h-[400px]">
-                <div className="absolute inset-0 bg-black/65 z-10" />
+                <div className="absolute inset-0 bg-black/50 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60 z-10" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_20%,rgba(0,0,0,0.4)_100%)] z-10" />
                 <img 
                     src="/asif-aether-_JbCkp6FehY-unsplash.jpg" 
                     alt="Atheva Resort Grand Entrance" 
