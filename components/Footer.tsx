@@ -33,13 +33,14 @@ export default function Footer() {
                     <div className="flex items-center gap-4 mb-8">
                         <div className="w-10 h-10 text-primary-gold">
                             <svg 
-                                viewBox="0 0 500 500" 
+                                viewBox="0 0 200 200" 
                                 className="w-full h-full fill-none"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
-                                <path d="M250 40L390 150V270C390 270 430 270 430 350V460H360C360 460 360 320 320 320V250C320 250 290 180 250 180C210 180 180 250 180 250V320C140 320 140 460 140 460H70V350C70 270 110 270 110 270V150L250 40Z" stroke="currentColor" stroke-width="24" stroke-linejoin="round"/>
-                                <path d="M250 165L280 210L250 255L220 210L250 165Z" fill="currentColor"/>
-                                <path d="M125 240C125 150 200 110 250 110C300 110 375 150 375 240C375 320 250 430 250 430C250 430 125 320 125 240Z" stroke="currentColor" stroke-width="24" stroke-linejoin="round" fill="none"/>
+                                <path d="M100 10C70 40 40 45 25 80C15 105 30 130 50 140L50 160C30 150 20 130 20 100C20 60 60 35 100 10C140 35 180 60 180 100C180 130 170 150 150 160L150 140C170 130 185 105 175 80C160 45 130 40 100 10" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M100 55C75 75 60 80 60 100C60 120 75 135 100 155C125 135 140 120 140 100C140 80 125 75 100 55" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polygon points="100,75 115,90 100,105 85,90" stroke="currentColor" stroke-width="8" fill="none"/>
+                                <polygon points="100,82 108,90 100,98 92,90" fill="currentColor"/>
                             </svg>
                         </div>
                         <h2 className="font-serif text-2xl font-bold text-white tracking-widest leading-none">ATHEVA</h2>
