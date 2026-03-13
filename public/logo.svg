@@ -1,0 +1,7 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M250 40L390 150V270C390 270 430 270 430 350V460H360C360 460 360 320 320 320V250C320 250 290 180 250 180C210 180 180 250 180 250V320C140 320 140 460 140 460H70V350C70 270 110 270 110 270V150L250 40Z" stroke="currentColor" stroke-width="24" stroke-linejoin="round"/>
+  
+  <path d="M250 165L280 210L250 255L220 210L250 165Z" fill="currentColor"/>
+  
+  <path d="M125 240C125 150 200 110 250 110C300 110 375 150 375 240C375 320 250 430 250 430C250 430 125 320 125 240Z" stroke="currentColor" stroke-width="24" stroke-linejoin="round" fill="none"/>
+</svg>

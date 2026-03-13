@@ -69,7 +69,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             ATHEVA <br />{" "}
-            <span className="italic font-light text-white/90 text-4xl md:text-6xl lg:text-7xl block mt-4 whitespace-nowrap">Hospitality Meets Heart</span>
+            <span className="italic font-light text-white/90 text-4xl md:text-6xl lg:text-7xl block mt-4 whitespace-nowrap">The Art of Welcoming</span>
           </motion.h1>
           <motion.p
             className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-8 font-light leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
@@ -124,7 +124,7 @@ export default function Home() {
             </div>
             <div className="aspect-[3/4] rounded-sm overflow-hidden -translate-y-8 shadow-2xl transition-transform hover:scale-105 duration-700">
               <img
-                src="/v2-2.jpeg"
+                src="/v2-2.png"
                 alt="ATHEVA Resort Mountain View"
                 className="w-full h-full object-cover grayscale-[20%]"
               />
@@ -183,7 +183,6 @@ export default function Home() {
               href="#"
             >
               View All Services
-              <span className="material-symbols-outlined text-lg">arrow_right_alt</span>
             </a>
           </motion.div>
           <motion.div
@@ -198,19 +197,19 @@ export default function Home() {
                 title: "Boutique Stays",
                 desc: "Comfortable and elegant rooms designed to offer a stay that feels both memorable and meaningful.",
                 icon: "hotel",
-                img: "/v2-3.jpeg",
+                img: "/1.png",
               },
               {
                 title: "Weddings & Celebrations",
                 desc: "A beautiful venue for life's most meaningful moments, from destination weddings to family gatherings.",
                 icon: "favorite",
-                img: "/v2-4.jpeg",
+                img: "/Weeding.png",
               },
               {
                 title: "Corporate Retreats",
                 desc: "An ideal setting for team retreats and leadership meetings, where ideas and inspiration meet.",
                 icon: "business",
-                img: "/v2-7.jpeg",
+                img: "/Corporate.png",
               },
             ].map((item, i) => (
               <motion.div
@@ -304,7 +303,7 @@ export default function Home() {
               {...fadeInUp}
             >
               <Image
-                src="/v2-7.jpeg"
+                src="/v2-2.png"
                 alt="Atheva Experiences"
                 fill
                 className="object-cover"
@@ -390,8 +389,8 @@ export default function Home() {
             >
               <div className="relative w-full max-w-sm aspect-[3/4] md:aspect-square rounded-sm overflow-hidden border-[8px] border-white shadow-2xl hover:rotate-0 transition-transform duration-700">
                 <Image
-                  src="/v2-3.jpeg"
-                  alt="Atheva Resort Grand Entrance"
+                  src="/lansdowne-6.jpeg"
+                  alt="Atheva Resort Guest Experience"
                   fill
                   className="object-cover"
                 />

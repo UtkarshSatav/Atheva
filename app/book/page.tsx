@@ -40,10 +40,19 @@ function BookingForm() {
         setError("");
 
         try {
-            // Simulate form submission
-            await new Promise((resolve) => setTimeout(resolve, 1500));
-            // In the future, send this data to an API route to email the admin or save it
-            
+            const response = await fetch("/api/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                const data = await response.json();
+                throw new Error(data.error || "Failed to send booking request");
+            }
+
             setIsSuccess(true);
             setTimeout(() => {
                 router.push("/");
@@ -65,7 +74,7 @@ function BookingForm() {
                     <span className="material-symbols-outlined text-6xl text-primary-gold mb-6">check_circle</span>
                     <h2 className="text-3xl font-serif text-text-main mb-4">Request Received</h2>
                     <p className="text-text-muted mb-8 font-light leading-relaxed">
-                        Thank you for your interest. Our reservations team will contact you shortly to confirm your booking details.
+                        Thank you for your interest. Our team will contact you shortly to confirm your booking details.
                     </p>
                     <p className="text-xs text-text-light uppercase tracking-widest">Redirecting to home...</p>
                 </motion.div>

@@ -44,26 +44,6 @@ const CORE_VALUES = [
     }
 ];
 
-const LEADERSHIP = [
-    {
-        name: "Eleanor Sterling",
-        role: "Founder & CEO",
-        image: "/v2-4.jpeg",
-        bio: "With over two decades in luxury hospitality, Eleanor founded Atheva to redefine the benchmark for premium celebrations."
-    },
-    {
-        name: "Marcus Vance",
-        role: "Director of Operations",
-        image: "/v2-5.jpeg",
-        bio: "Marcus ensures that every venue operates flawlessly, maintaining the strict standards of the Atheva brand."
-    },
-    {
-        name: "Isabella Thorne",
-        role: "Head of Guest Experience",
-        image: "/v2-6.jpeg",
-        bio: "Isabella curates the moments that turn a simple stay into a deeply personal, unforgettable narrative."
-    }
-];
 
 export default function AboutPage() {
     return (
@@ -197,37 +177,6 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Leadership Section */}
-            <section className="py-24 px-6 md:px-12 bg-white">
-                <div className="max-w-7xl mx-auto">
-                    <motion.div 
-                        className="text-center max-w-3xl mx-auto mb-16"
-                        {...fadeInUp}
-                    >
-                        <h2 className="font-serif text-4xl py-2 md:text-5xl text-text-main leading-tight">Meet the Architects of Luxury</h2>
-                        <p className="text-text-muted mt-4 font-light max-w-xl mx-auto">The visionaries and experts dedicated to making every moment of your Atheva experience flawless.</p>
-                    </motion.div>
-
-                    <motion.div 
-                        className="grid grid-cols-1 md:grid-cols-3 gap-12"
-                        variants={staggerContainer}
-                        initial="initial"
-                        whileInView="whileInView"
-                        viewport={{ once: true }}
-                    >
-                        {LEADERSHIP.map((leader, i) => (
-                            <motion.div key={i} variants={fadeInUp} className="group text-center">
-                                <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 ring-4 ring-transparent group-hover:ring-primary-gold/20 transition-all duration-500">
-                                    <img src={leader.image} alt={leader.name} className="w-full h-full object-cover filter grayscale transition-all duration-500 group-hover:grayscale-0" />
-                                </div>
-                                <h3 className="font-serif text-2xl text-text-main mb-1">{leader.name}</h3>
-                                <p className="text-primary-gold text-xs font-bold uppercase tracking-widest mb-4">{leader.role}</p>
-                                <p className="text-text-muted text-sm font-light leading-relaxed">{leader.bio}</p>
-                            </motion.div>
-                        ))}
-                    </motion.div>
-                </div>
-            </section>
 
             {/* Upcoming Properties (reused component) */}
             <UpcomingProperties />

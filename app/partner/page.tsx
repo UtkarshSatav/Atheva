@@ -18,7 +18,7 @@ export default function PartnerPage() {
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-black/65 z-10" />
                     <img 
-                        src="/asif-aether-_JbCkp6FehY-unsplash.jpg" 
+                        src="/exp-corporate.png" 
                         alt="Partner With Us" 
                         className="w-full h-full object-cover"
                     />

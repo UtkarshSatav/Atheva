@@ -37,7 +37,7 @@ export default function ContactPage() {
                         src="/v2-1.jpeg"
                         alt="Atheva Contact"
                         fill
-                        className="object-fill"
+                        className="object-cover object-bottom-right scale-[1.1] origin-bottom-right"
                         priority
                     />
                 </motion.div>
@@ -75,7 +75,7 @@ export default function ContactPage() {
                             </span>
                             <h2 className="text-4xl md:text-5xl font-serif font-medium tracking-tight text-text-main leading-[1.1]">
                                 Hospitality <br />
-                                <span className="italic text-text-muted">With Heart</span>
+                                <span className="italic text-text-muted">The Art of Welcoming</span>
                             </h2>
                             <p className="text-text-muted text-lg font-light leading-relaxed max-w-md">
                                 Whether you are planning a stay, a celebration, or exploring partnership opportunities, our team is ready to assist you.
@@ -90,9 +90,9 @@ export default function ContactPage() {
                             viewport={{ once: true }}
                         >
                             {[
-                                { title: "Email", value: "info@chowk.co.in", sub: "Online support 24/7", icon: "mail" },
+                                { title: "Email", value: "bookings@atheva.in", sub: "Online support 24/7", icon: "mail" },
                                 { title: "Address", value: "WZ-24/1 FF Left Side, Mukharjee Park", sub: "New Delhi – 110018", icon: "location_on" },
-                                { title: "Website", value: "www.chowk.co.in", sub: "Visit our ecosystem", icon: "public" },
+                                { title: "Website", value: "www.atheva.in", sub: "Visit our ecosystem", icon: "public" },
                             ].map((item, i) => (
                                 <motion.div 
                                     key={i} 

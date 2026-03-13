@@ -27,18 +27,23 @@ export default function Navbar() {
         >
             <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
                 <div className="flex-1 flex justify-start">
-                    <Link href="/" className="flex items-center gap-3 group">
-                        <motion.span 
-                            className={`material-symbols-outlined text-3xl transition-transform duration-500 group-hover:rotate-180 ${scrolled ? "text-primary-gold" : "text-white"}`}
-                            whileHover={{ scale: 1.2, rotate: 180 }}
-                        >
-                            diamond
-                        </motion.span>
+                    <Link href="/" className="flex items-center gap-4 group">
+                        <div className={`relative w-10 h-10 transition-transform duration-500 group-hover:scale-110 ${scrolled ? "text-primary-gold" : "text-white"}`}>
+                            <svg 
+                                viewBox="0 0 500 500" 
+                                className="w-full h-full fill-none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="M250 40L390 150V270C390 270 430 270 430 350V460H360C360 460 360 320 320 320V250C320 250 290 180 250 180C210 180 180 250 180 250V320C140 320 140 460 140 460H70V350C70 270 110 270 110 270V150L250 40Z" stroke="currentColor" stroke-width="24" stroke-linejoin="round"/>
+                                <path d="M250 165L280 210L250 255L220 210L250 165Z" fill="currentColor"/>
+                                <path d="M125 240C125 150 200 110 250 110C300 110 375 150 375 240C375 320 250 430 250 430C250 430 125 320 125 240Z" stroke="currentColor" stroke-width="24" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                        </div>
                         <div className="flex flex-col">
-                            <h1 className={`font-cinzel text-xl font-bold tracking-widest leading-none ${scrolled ? "text-text-main" : "text-white"}`}>
+                            <h1 className={`font-serif text-2xl font-bold tracking-widest leading-none ${scrolled ? "text-text-main" : "text-white"}`}>
                                 ATHEVA
                             </h1>
-                            <span className={`text-[10px] uppercase tracking-[0.3em] leading-none mt-1 ${scrolled ? "text-accent-bronze" : "text-white/80"}`}>
+                            <span className={`text-[10px] uppercase tracking-[0.4em] leading-none mt-1.5 ${scrolled ? "text-accent-bronze" : "text-white/80"}`}>
                                 by Chowk
                             </span>
                         </div>

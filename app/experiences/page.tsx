@@ -110,21 +110,21 @@ export default function ExperiencesPage() {
                                 subtitle: "A Stay That Feels Personal",
                                 desc: "ATHEVA destinations are designed as boutique hospitality retreats, offering guests an experience that feels both intimate and memorable. Unlike large hotels, ATHEVA properties focus on personalized hospitality, peaceful environments, and thoughtfully designed spaces.",
                                 icon: "hotel",
-                                img: "/v2-8.jpeg"
+                                img: "/Screenshot 2026-03-13 at 5.15.32 PM.png"
                             },
                             {
                                 title: "Weddings & Celebrations",
                                 subtitle: "Celebrate Life's Most Meaningful Moments",
                                 desc: "ATHEVA destinations are designed to host beautiful and memorable celebrations. From destination weddings to family gatherings, each property offers elegant venues and warm hospitality that create unforgettable moments.",
                                 icon: "favorite",
-                                img: "/v2-5.jpeg"
+                                img: "/Weeding.png"
                             },
                             {
                                 title: "Corporate Retreats",
                                 subtitle: "Where Ideas and Inspiration Meet",
                                 desc: "ATHEVA destinations offer a peaceful environment that is ideal for corporate retreats, leadership gatherings, and team offsite events. Away from the distractions of city life, guests can focus on collaboration and reflection.",
                                 icon: "groups",
-                                img: "/lansdowne-6.jpeg"
+                                img: "/Corporate.png"
                             }
                         ].map((exp, i) => (
                             <motion.div 
@@ -195,6 +195,7 @@ export default function ExperiencesPage() {
                     </motion.div>
                 </div>
             </section>
+
         </div>
     );
 }

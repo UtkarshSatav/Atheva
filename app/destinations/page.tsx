@@ -89,7 +89,6 @@ export default function DestinationsPage() {
                                     className="inline-flex items-center gap-2 text-primary-gold font-bold uppercase tracking-widest text-xs border-b border-primary-gold/20 pb-1 hover:border-primary-gold transition-all"
                                 >
                                     Explore Destination
-                                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
                                 </Link>
                             </div>
                         </motion.div>

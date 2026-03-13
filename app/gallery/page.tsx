@@ -34,7 +34,7 @@ export default function GalleryPage() {
             {/* Hero Header */}
             <div className="relative w-full h-[40vh] min-h-[300px]">
                 <div className="absolute inset-0 bg-black/65 z-10" />
-                <img src="/asif-aether-_JbCkp6FehY-unsplash.jpg" alt="ATHEVA Gallery" className="absolute inset-0 w-full h-full object-cover" />
+                <img src="/Banquet.png" alt="ATHEVA Gallery" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center z-20 pt-20">
                     <motion.h1 
                         className="font-serif text-5xl md:text-7xl text-white mb-4 drop-shadow-md"

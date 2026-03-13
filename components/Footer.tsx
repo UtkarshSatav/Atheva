@@ -30,12 +30,22 @@ export default function Footer() {
                 viewport={{ once: true }}
             >
                 <motion.div className="col-span-1 md:col-span-1" variants={fadeInUp}>
-                    <div className="flex items-center gap-3 mb-8">
-                        <span className="material-symbols-outlined text-primary-gold text-3xl">diamond</span>
-                        <h2 className="font-cinzel text-xl font-bold text-white tracking-widest">ATHEVA</h2>
+                    <div className="flex items-center gap-4 mb-8">
+                        <div className="w-10 h-10 text-primary-gold">
+                            <svg 
+                                viewBox="0 0 500 500" 
+                                className="w-full h-full fill-none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="M250 40L390 150V270C390 270 430 270 430 350V460H360C360 460 360 320 320 320V250C320 250 290 180 250 180C210 180 180 250 180 250V320C140 320 140 460 140 460H70V350C70 270 110 270 110 270V150L250 40Z" stroke="currentColor" stroke-width="24" stroke-linejoin="round"/>
+                                <path d="M250 165L280 210L250 255L220 210L250 165Z" fill="currentColor"/>
+                                <path d="M125 240C125 150 200 110 250 110C300 110 375 150 375 240C375 320 250 430 250 430C250 430 125 320 125 240Z" stroke="currentColor" stroke-width="24" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                        </div>
+                        <h2 className="font-serif text-2xl font-bold text-white tracking-widest leading-none">ATHEVA</h2>
                     </div>
                     <p className="text-gray-400 text-sm leading-relaxed mb-8 font-light">
-                        Hospitality Inspired by Athithi + Seva. Rooted in timeless Indian philosophy, ATHEVA blends modern comfort with traditional warmth.
+                        The Art of Welcoming. Rooted in timeless Indian philosophy, ATHEVA blends modern comfort with traditional warmth.
                     </p>
                     <div className="flex gap-5">
                         <motion.a whileHover={{ scale: 1.2, color: "var(--primary-gold)" }} className="text-gray-400 transition-colors" href="https://www.facebook.com/profile.php?id=61586878500352" target="_blank" rel="noopener noreferrer">
@@ -74,11 +84,11 @@ export default function Footer() {
                         </li>
                         <li className="flex items-center gap-3 text-gray-400 text-sm font-light">
                             <span className="material-symbols-outlined text-base text-primary-gold">mail</span>
-                            info@chowk.co.in
+                            bookings@atheva.in
                         </li>
                         <li className="flex items-center gap-3 text-gray-400 text-sm font-light">
                             <span className="material-symbols-outlined text-base text-primary-gold">public</span>
-                            www.chowk.co.in
+                            www.atheva.in
                         </li>
                     </ul>
                 </motion.div>
