@@ -33,25 +33,26 @@ export default function Home() {
     <div className="relative flex flex-col min-h-screen w-full overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-        <motion.div 
-          className="absolute inset-0 z-0"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
+        <motion.div
+          className="absolute inset-0 z-0 overflow-hidden"
+          initial={{ scale: 1.2 }}
+          animate={{ scale: 1.1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
+          style={{ originX: 1, originY: 1 }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-background-offwhite/80 z-10"></div>
           <div className="absolute inset-0 bg-black/40 z-10"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_20%,rgba(0,0,0,0.4)_100%)] z-10"></div>
-          <div
-            className="w-full h-full bg-cover bg-center animate-kenburns brightness-110 saturate-[0.8]"
-            style={{
-              backgroundImage:
-                "url('/hero_premium.png')",
-            }}
-          ></div>
+          <Image
+            src="/v2-5.jpeg"
+            alt="Atheva Hero"
+            fill
+            className="animate-kenburns brightness-110 saturate-[0.8] object-cover object-bottom-right"
+            priority
+          />
         </motion.div>
         <div className="relative z-20 text-center max-w-5xl px-6 pt-24 pb-32">
-          <motion.div 
+          <motion.div
             className="inline-block border-b border-primary-gold/50 pb-1 mb-6"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -61,7 +62,7 @@ export default function Home() {
               Hospitality Inspired by Athithi + Seva
             </span>
           </motion.div>
-          <motion.h1 
+          <motion.h1
             className="font-serif text-5xl md:text-7xl lg:text-8xl font-medium text-white leading-none mb-8 drop-shadow-lg"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -70,7 +71,7 @@ export default function Home() {
             ATHEVA <br />{" "}
             <span className="italic font-light text-white/90 text-4xl md:text-6xl lg:text-7xl block mt-4 whitespace-nowrap">Hospitality Meets Heart</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-8 font-light leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -78,7 +79,7 @@ export default function Home() {
           >
             ATHEVA is a boutique hospitality destination rooted in the timeless Indian philosophy of Athithi + Seva — where every guest is welcomed with warmth and served with genuine care.
           </motion.p>
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row gap-5 justify-center items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -92,7 +93,7 @@ export default function Home() {
             </button>
           </motion.div>
         </div>
-        <motion.div 
+        <motion.div
           className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20 text-white/60"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -110,26 +111,26 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-24 px-6 md:px-12 bg-white relative mt-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <motion.div 
+          <motion.div
             className="relative grid grid-cols-2 gap-6"
             {...fadeInUp}
           >
             <div className="aspect-[3/4] rounded-sm overflow-hidden translate-y-8 shadow-2xl transition-transform hover:scale-105 duration-700">
               <img
-                src="/lansdowne-4.jpeg"
+                src="/v2-1.jpeg"
                 alt="ATHEVA Lansdowne Resort"
                 className="w-full h-full object-cover grayscale-[20%]"
               />
             </div>
             <div className="aspect-[3/4] rounded-sm overflow-hidden -translate-y-8 shadow-2xl transition-transform hover:scale-105 duration-700">
               <img
-                src="/lansdowne-3.jpeg"
+                src="/v2-2.jpeg"
                 alt="ATHEVA Resort Mountain View"
                 className="w-full h-full object-cover grayscale-[20%]"
               />
             </div>
           </motion.div>
-          <motion.div 
+          <motion.div
             className="flex flex-col gap-8"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -167,7 +168,7 @@ export default function Home() {
       {/* Offerings Section */}
       <section className="py-24 px-6 md:px-12 bg-background-offwhite border-y border-border-subtle">
         <div className="max-w-7xl mx-auto flex flex-col gap-16">
-          <motion.div 
+          <motion.div
             className="flex flex-col md:flex-row justify-between items-end gap-8"
             {...fadeInUp}
           >
@@ -185,7 +186,7 @@ export default function Home() {
               <span className="material-symbols-outlined text-lg">arrow_right_alt</span>
             </a>
           </motion.div>
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-10"
             variants={staggerContainer}
             initial="initial"
@@ -197,19 +198,19 @@ export default function Home() {
                 title: "Boutique Stays",
                 desc: "Comfortable and elegant rooms designed to offer a stay that feels both memorable and meaningful.",
                 icon: "hotel",
-                img: "/lansdowne-2.jpeg",
+                img: "/v2-3.jpeg",
               },
               {
                 title: "Weddings & Celebrations",
                 desc: "A beautiful venue for life's most meaningful moments, from destination weddings to family gatherings.",
                 icon: "favorite",
-                img: "/lansdowne-12.jpeg",
+                img: "/v2-4.jpeg",
               },
               {
                 title: "Corporate Retreats",
                 desc: "An ideal setting for team retreats and leadership meetings, where ideas and inspiration meet.",
                 icon: "business",
-                img: "/lansdowne-6.jpeg",
+                img: "/v2-7.jpeg",
               },
             ].map((item, i) => (
               <motion.div
@@ -245,7 +246,7 @@ export default function Home() {
       {/* Why Choose Us Section */}
       <section className="py-28 px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center max-w-3xl mx-auto mb-20"
             {...fadeInUp}
           >
@@ -254,7 +255,7 @@ export default function Home() {
             </span>
             <h2 className="font-serif text-4xl md:text-5xl text-text-main leading-tight">Hospitality Inspired by Indian Values</h2>
           </motion.div>
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-12"
             variants={staggerContainer}
             initial="initial"
@@ -298,46 +299,47 @@ export default function Home() {
       <section className="py-24 px-6 md:px-12 bg-background-offwhite border-y border-border-subtle">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <motion.div 
-                className="relative"
-                {...fadeInUp}
+            <motion.div
+              className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-2xl"
+              {...fadeInUp}
             >
-                <img 
-                    src="/lansdowne-9.jpeg" 
-                    alt="CHOWK Ecosystem" 
-                    className="rounded-sm shadow-2xl grayscale-[20%]"
-                />
+              <Image
+                src="/v2-7.jpeg"
+                alt="Atheva Experiences"
+                fill
+                className="object-cover"
+              />
             </motion.div>
-            <motion.div 
-                className="flex flex-col gap-8"
-                {...fadeInUp}
+            <motion.div
+              className="flex flex-col gap-8"
+              {...fadeInUp}
             >
-                <div className="flex items-center gap-3 mb-2">
-                    <span className="h-px w-16 bg-primary-gold"></span>
-                    <span className="text-primary-dark text-xs font-bold tracking-[0.25em] uppercase">Part of the CHOWK Entertainment Ecosystem</span>
-                </div>
-                <h2 className="font-serif text-4xl md:text-5xl text-text-main leading-tight">
-                    An Integrated Platform for <br /> <span className="italic text-primary-gold">Destination Experiences</span>
-                </h2>
-                <div className="space-y-6 text-text-muted text-lg font-light leading-relaxed">
-                    <p>
-                        ATHEVA is a hospitality vertical of the CHOWK Entertainment Ecosystem, an integrated platform focused on developing destination experiences across India.
-                    </p>
-                    <ul className="space-y-4">
-                        <li className="flex gap-4">
-                            <span className="text-primary-gold font-bold">CHOWK</span>
-                            <span>Creates entertainment and lifestyle hubs</span>
-                        </li>
-                        <li className="flex gap-4">
-                            <span className="text-primary-gold font-bold">ARENAA</span>
-                            <span>Builds vibrant food and entertainment destinations</span>
-                        </li>
-                        <li className="flex gap-4">
-                            <span className="text-primary-gold font-bold">ATHEVA</span>
-                            <span>Delivers refined hospitality and celebration experiences</span>
-                        </li>
-                    </ul>
-                </div>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="h-px w-16 bg-primary-gold"></span>
+                <span className="text-primary-dark text-xs font-bold tracking-[0.25em] uppercase">Part of the CHOWK Entertainment Ecosystem</span>
+              </div>
+              <h2 className="font-serif text-4xl md:text-5xl text-text-main leading-tight">
+                An Integrated Platform for <br /> <span className="italic text-primary-gold">Destination Experiences</span>
+              </h2>
+              <div className="space-y-6 text-text-muted text-lg font-light leading-relaxed">
+                <p>
+                  ATHEVA is a hospitality vertical of the CHOWK Entertainment Ecosystem, an integrated platform focused on developing destination experiences across India.
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex gap-4">
+                    <span className="text-primary-gold font-bold">CHOWK</span>
+                    <span>Creates entertainment and lifestyle hubs</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="text-primary-gold font-bold">ARENAA</span>
+                    <span>Builds vibrant food and entertainment destinations</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="text-primary-gold font-bold">ATHEVA</span>
+                    <span>Delivers refined hospitality and celebration experiences</span>
+                  </li>
+                </ul>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -351,7 +353,7 @@ export default function Home() {
         ></div>
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <motion.div 
+            <motion.div
               className="order-2 md:order-1 relative"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -366,7 +368,7 @@ export default function Home() {
                   "The venue was absolutely breathtaking. The attention to detail and the level of service we received
                   made our gala night unforgettable. ATHEVA truly defines luxury."
                 </h3>
-            <div className="flex items-center gap-5">
+                <div className="flex items-center gap-5">
                   <div className="w-14 h-14 rounded-full bg-primary-gold/20 overflow-hidden shadow-md ring-2 ring-primary-gold/20 flex items-center justify-center">
                     <span className="text-primary-gold font-serif text-xl font-bold">SJ</span>
                   </div>
@@ -379,7 +381,7 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="order-1 md:order-2 h-full flex items-center justify-center"
               initial={{ opacity: 0, scale: 0.9, rotate: 5 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 2 }}
@@ -387,10 +389,11 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <div className="relative w-full max-w-sm aspect-[3/4] md:aspect-square rounded-sm overflow-hidden border-[8px] border-white shadow-2xl hover:rotate-0 transition-transform duration-700">
-                <img
-                  src="/lansdowne-11.jpeg"
-                  alt="ATHEVA Resort Night View"
-                  className="w-full h-full object-cover"
+                <Image
+                  src="/v2-3.jpeg"
+                  alt="Atheva Resort Grand Entrance"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </motion.div>
@@ -404,7 +407,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-24 px-6 bg-white border-t border-border-subtle relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary-light via-primary-gold to-primary-light opacity-30"></div>
-        <motion.div 
+        <motion.div
           className="max-w-4xl mx-auto text-center relative z-10"
           {...fadeInUp}
         >

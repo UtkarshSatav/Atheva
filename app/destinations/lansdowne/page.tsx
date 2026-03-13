@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import UpcomingProperties from "@/components/UpcomingProperties";
 
 const fadeInUp = {
@@ -12,14 +13,14 @@ const fadeInUp = {
 };
 
 const PROPERTY_IMAGES = [
-    { src: "/lansdowne-3.jpeg", alt: "Red Roof Resort — Resort overview with cottages and mountains" },
-    { src: "/lansdowne-4.jpeg", alt: "Red Roof Resort — Building exterior and corridor" },
-    { src: "/lansdowne-1.jpeg", alt: "Red Roof Resort — Mountain walkway view" },
-    { src: "/lansdowne-2.jpeg", alt: "Red Roof Resort — Building exterior with seating" },
-    { src: "/lansdowne-6.jpeg", alt: "Red Roof Resort — Wide resort panoramic view" },
-    { src: "/lansdowne-9.jpeg", alt: "Red Roof Resort — Aerial view of green roof cottages" },
-    { src: "/lansdowne-12.jpeg", alt: "Red Roof Resort — Garden lawn with mountain backdrop" },
-    { src: "/lansdowne-7.jpeg", alt: "Red Roof Resort — Stunning night view" },
+    { src: "/v2-1.jpeg", alt: "Red Roof Resort — Resort overview with cottages and mountains" },
+    { src: "/v2-2.jpeg", alt: "Red Roof Resort — Building exterior and corridor" },
+    { src: "/v2-3.jpeg", alt: "Red Roof Resort — Mountain walkway view" },
+    { src: "/v2-4.jpeg", alt: "Red Roof Resort — Building exterior with seating" },
+    { src: "/v2-5.jpeg", alt: "Red Roof Resort — Wide resort panoramic view" },
+    { src: "/v2-6.jpeg", alt: "Red Roof Resort — Aerial view of green roof cottages" },
+    { src: "/v2-7.jpeg", alt: "Red Roof Resort — Garden lawn with mountain backdrop" },
+    { src: "/v2-8.jpeg", alt: "Red Roof Resort — Stunning night view" },
     { src: "/lansdowne-8.jpeg", alt: "Red Roof Resort — Night view with colorful lights" },
     { src: "/lansdowne-11.jpeg", alt: "Red Roof Resort — Night distant panoramic" },
     { src: "/lansdowne-5.jpeg", alt: "Red Roof Resort — Full resort view" },
@@ -38,10 +39,12 @@ export default function LansdownePage() {
                     <div className="absolute inset-0 bg-black/50 z-10" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60 z-10" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_20%,rgba(0,0,0,0.4)_100%)] z-10" />
-                    <img 
-                        src="/asif-aether-_JbCkp6FehY-unsplash.jpg" 
+                    <Image 
+                        src="/v2-4.jpeg" 
                         alt="ATHEVA Lansdowne — Red Roof Resort" 
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-fill"
+                        priority
                     />
                 </div>
                 <div className="relative z-20 text-center px-6">
@@ -84,7 +87,7 @@ export default function LansdownePage() {
                         whileInView={{ opacity: 1, scale: 1 }}
                     >
                         <img 
-                            src="/lansdowne-4.jpeg" 
+                            src="/v2-1.jpeg" 
                             alt="Red Roof Resort Lansdowne — Resort View" 
                             className="w-full h-full object-cover"
                         />
@@ -102,19 +105,19 @@ export default function LansdownePage() {
                                 title: "Boutique Forest Stay",
                                 desc: "Comfortable accommodations designed to blend naturally with the surrounding landscape.",
                                 icon: "cabin",
-                                image: "/lansdowne-2.jpeg"
+                                image: "/v2-2.jpeg"
                             },
                             {
                                 title: "Destination Weddings",
                                 desc: "A unique venue for weddings and celebrations in the scenic beauty of the mountains.",
                                 icon: "favorite",
-                                image: "/lansdowne-12.jpeg"
+                                image: "/v2-3.jpeg"
                             },
                             {
                                 title: "Corporate Retreats",
                                 desc: "An ideal setting for team retreats, leadership meetings, and offsite gatherings.",
                                 icon: "groups",
-                                image: "/lansdowne-6.jpeg"
+                                image: "/v2-5.jpeg"
                             }
                         ].map((exp, i) => (
                             <div key={i} className="bg-white rounded-sm border border-border-subtle hover:shadow-xl transition-all overflow-hidden group">

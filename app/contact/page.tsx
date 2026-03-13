@@ -33,12 +33,13 @@ export default function ContactPage() {
                     <div className="absolute inset-0 bg-black/50 z-10" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60 z-10" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_20%,rgba(0,0,0,0.4)_100%)] z-10" />
-                    <div
-                        className="w-full h-full bg-cover bg-center"
-                        style={{
-                            backgroundImage: "url('/asif-aether-_JbCkp6FehY-unsplash.jpg')",
-                        }}
-                    ></div>
+                    <Image
+                        src="/v2-1.jpeg"
+                        alt="Atheva Contact"
+                        fill
+                        className="object-fill"
+                        priority
+                    />
                 </motion.div>
                 <div className="relative z-20 text-center px-6 mt-16">
                     <motion.h1 

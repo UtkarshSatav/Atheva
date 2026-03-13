@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import UpcomingProperties from "@/components/UpcomingProperties";
 
 const fadeInUp = {
@@ -19,10 +20,12 @@ export default function BhimtalPage() {
                     <div className="absolute inset-0 bg-black/50 z-10" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60 z-10" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_20%,rgba(0,0,0,0.4)_100%)] z-10" />
-                    <img 
-                        src="/asif-aether-_JbCkp6FehY-unsplash.jpg" 
+                    <Image 
+                        src="/v2-3.jpeg" 
                         alt="ATHEVA Bhimtal" 
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-fill"
+                        priority
                     />
                 </div>
                 <div className="relative z-20 text-center px-6">
@@ -65,7 +68,7 @@ export default function BhimtalPage() {
                         whileInView={{ opacity: 1, scale: 1 }}
                     >
                         <img 
-                            src="/lansdowne-6.jpeg" 
+                            src="/v2-5.jpeg" 
                             alt="Bhimtal Resort View" 
                             className="w-full h-full object-cover"
                         />

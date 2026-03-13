@@ -52,7 +52,7 @@ export default function UpcomingProperties() {
                         <Link href="/destinations/bhimtal">
                             <div className="relative aspect-[4/3] rounded-sm overflow-hidden mb-6 shadow-lg border border-border-subtle">
                                 <img 
-                                    src="/bhimtal-resort.png" 
+                                    src="/v2-3.jpeg" 
                                     alt="Atheva, Bhimtal" 
                                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                                 />
@@ -82,7 +82,7 @@ export default function UpcomingProperties() {
                         <Link href="/destinations/lansdowne">
                             <div className="relative aspect-[4/3] rounded-sm overflow-hidden mb-6 shadow-lg border border-border-subtle">
                                 <img 
-                                    src="/lansdowne-7.jpeg" 
+                                    src="/v2-7.jpeg" 
                                     alt="Atheva, Lansdowne" 
                                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                                 />

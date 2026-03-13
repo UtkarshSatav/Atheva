@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, Suspense } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useSearchParams, useRouter } from "next/navigation";
 
@@ -79,10 +80,12 @@ function BookingForm() {
                 <div className="absolute inset-0 bg-black/50 z-10" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60 z-10" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_20%,rgba(0,0,0,0.4)_100%)] z-10" />
-                <img 
-                    src="/asif-aether-_JbCkp6FehY-unsplash.jpg" 
+                <Image 
+                    src="/v2-2.jpeg" 
                     alt="Atheva Resort Booking" 
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-fill"
+                    priority
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center z-20 pt-20 px-4">
                     <motion.div 

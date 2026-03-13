@@ -25,15 +25,18 @@ export default function ExperiencesPage() {
             {/* Hero Section */}
             <section className="relative w-full h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
                 <motion.div
-                    className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-                    style={{
-                        backgroundImage:
-                            "url('/asif-aether-_JbCkp6FehY-unsplash.jpg')",
-                    }}
+                    className="absolute inset-0 z-0"
                     initial={{ scale: 1.1 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
                 >
+                    <Image
+                        src="/v2-7.jpeg"
+                        alt="Atheva Experiences"
+                        fill
+                        className="object-fill"
+                        priority
+                    />
                     <div className="absolute inset-0 bg-black/40 z-10" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black/60 z-10" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_20%,rgba(0,0,0,0.5)_100%)] z-10" />
@@ -107,14 +110,14 @@ export default function ExperiencesPage() {
                                 subtitle: "A Stay That Feels Personal",
                                 desc: "ATHEVA destinations are designed as boutique hospitality retreats, offering guests an experience that feels both intimate and memorable. Unlike large hotels, ATHEVA properties focus on personalized hospitality, peaceful environments, and thoughtfully designed spaces.",
                                 icon: "hotel",
-                                img: "/lansdowne-2.jpeg"
+                                img: "/v2-8.jpeg"
                             },
                             {
                                 title: "Weddings & Celebrations",
                                 subtitle: "Celebrate Life's Most Meaningful Moments",
                                 desc: "ATHEVA destinations are designed to host beautiful and memorable celebrations. From destination weddings to family gatherings, each property offers elegant venues and warm hospitality that create unforgettable moments.",
                                 icon: "favorite",
-                                img: "/lansdowne-12.jpeg"
+                                img: "/v2-5.jpeg"
                             },
                             {
                                 title: "Corporate Retreats",

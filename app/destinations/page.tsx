@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import UpcomingProperties from "@/components/UpcomingProperties";
 
 const fadeInUp = {
@@ -36,10 +37,16 @@ export default function DestinationsPage() {
                 <div className="absolute inset-0 bg-black/50 z-10" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60 z-10" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_20%,rgba(0,0,0,0.4)_100%)] z-10" />
-                <div className="absolute inset-0 bg-[url('/asif-aether-_JbCkp6FehY-unsplash.jpg')] bg-cover bg-center" />
+                <Image
+                    src="/asif-aether-_JbCkp6FehY-unsplash.jpg"
+                    alt="Atheva Destinations"
+                    fill
+                    className="object-fill"
+                    priority
+                />
                 <div className="absolute inset-0 flex flex-col items-center justify-center z-20 pt-20">
                     <motion.h1 
-                        className="text-4xl md:text-6xl font-serif text-white drop-shadow-md"
+                        className="text-4xl md:text-6xl font-serif text-white drop-shadow-md text-center"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                     >

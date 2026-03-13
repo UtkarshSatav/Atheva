@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import UpcomingProperties from "@/components/UpcomingProperties";
 
 const fadeInUp = {
@@ -47,19 +48,19 @@ const LEADERSHIP = [
     {
         name: "Eleanor Sterling",
         role: "Founder & CEO",
-        image: "/lansdowne-4.jpeg",
+        image: "/v2-4.jpeg",
         bio: "With over two decades in luxury hospitality, Eleanor founded Atheva to redefine the benchmark for premium celebrations."
     },
     {
         name: "Marcus Vance",
         role: "Director of Operations",
-        image: "/lansdowne-9.jpeg",
+        image: "/v2-5.jpeg",
         bio: "Marcus ensures that every venue operates flawlessly, maintaining the strict standards of the Atheva brand."
     },
     {
         name: "Isabella Thorne",
         role: "Head of Guest Experience",
-        image: "/lansdowne-12.jpeg",
+        image: "/v2-6.jpeg",
         bio: "Isabella curates the moments that turn a simple stay into a deeply personal, unforgettable narrative."
     }
 ];
@@ -72,11 +73,13 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-black/50 z-10" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60 z-10" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_20%,rgba(0,0,0,0.4)_100%)] z-10" />
-                <img 
-                    src="/asif-aether-_JbCkp6FehY-unsplash.jpg" 
-                    alt="Atheva Resort Grand Entrance" 
-                    className="w-full h-full object-cover object-top"
-                />
+                    <Image
+                        src="/v2-3.jpeg"
+                        alt="Atheva Resort Grand Entrance"
+                        fill
+                        className="object-cover object-bottom-right scale-[1.1] origin-bottom-right"
+                        priority
+                    />
                 <div className="absolute inset-0 flex flex-col items-center justify-center z-20 pt-20 px-4">
                     <motion.div 
                         className="text-center"
@@ -126,10 +129,11 @@ export default function AboutPage() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <img 
-                            src="/lansdowne-3.jpeg" 
+                        <Image 
+                            src="/v2-1.jpeg" 
                             alt="Atheva Historic Architecture" 
-                            className="w-full h-full object-cover grayscale-[10%]"
+                            fill
+                            className="object-cover"
                         />
                     </motion.div>
                 </div>
@@ -230,7 +234,12 @@ export default function AboutPage() {
 
             {/* Final CTA */}
             <section className="py-24 px-6 bg-text-main text-white text-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/lansdowne-7.jpeg')] bg-cover bg-center opacity-10"></div>
+                <Image
+                    src="/v2-2.jpeg"
+                    alt="Atheva Footer Background"
+                    fill
+                    className="object-cover opacity-10"
+                />
                 <motion.div 
                     className="max-w-3xl mx-auto relative z-10"
                     {...fadeInUp}
