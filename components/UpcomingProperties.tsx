@@ -76,7 +76,7 @@ export default function UpcomingProperties() {
                         <Link href="/destinations/lansdowne">
                             <div className="relative aspect-[4/3] rounded-sm overflow-hidden mb-6 shadow-lg border border-border-subtle">
                                 <img 
-                                    src="/2-8.jpeg" 
+                                    src="/v2-8.jpeg" 
                                     alt="Atheva, Lansdowne" 
                                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                                 />
