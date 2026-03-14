@@ -161,9 +161,8 @@ export default function Navbar() {
                                             <Link 
                                                 href={item.href}
                                                 onClick={() => setIsMenuOpen(false)}
-                                                className="group flex items-end gap-5"
+                                                className="group flex items-center gap-5"
                                             >
-                                                <span className="text-xs text-accent-bronze font-medium mb-2 opacity-40 group-hover:opacity-100 transition-opacity">0{index + 1}</span>
                                                 <span className="text-5xl font-serif font-medium tracking-tight text-text-main group-hover:text-primary-gold transition-all group-hover:translate-x-3">
                                                     {item.label}
                                                 </span>
