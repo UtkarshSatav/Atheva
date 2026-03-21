@@ -50,9 +50,12 @@ function BookingForm() {
 
             if (!response.ok) {
                 const data = await response.json();
+                console.error("[Booking Error] API Response:", data);
                 throw new Error(data.error || "Failed to send booking request");
             }
 
+            const result = await response.json();
+            console.log("[Booking Success] API Response:", result);
             setIsSuccess(true);
             setTimeout(() => {
                 router.push("/");

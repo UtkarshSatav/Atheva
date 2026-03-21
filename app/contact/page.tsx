@@ -90,7 +90,7 @@ export default function ContactPage() {
                             viewport={{ once: true }}
                         >
                             {[
-                                { title: "Email", value: "bookings@atheva.in", sub: "Online support 24/7", icon: "mail" },
+                                { title: "Email", value: "chowk0504@gmail.com", sub: "Online support 24/7", icon: "mail" },
                                 { title: "Address", value: "WZ-24/1 FF Left Side, Mukharjee Park", sub: "New Delhi – 110018", icon: "location_on" },
                                 { title: "Website", value: "www.atheva.in", sub: "Visit our ecosystem", icon: "public" },
                             ].map((item, i) => (

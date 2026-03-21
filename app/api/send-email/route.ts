@@ -31,7 +31,7 @@ export async function POST(req: Request) {
     const mailOptions = {
       from: `"ATHEVA Website" <${process.env.EMAIL_USER}>`,
       replyTo: email,
-      to: 'bookings@atheva.in',
+      to: 'chowk0504@gmail.com',
       cc: process.env.EMAIL_USER, // Send a copy to the sender to verify it works
       subject: `New Booking Request: ${firstName} ${lastName}`,
       html: `
@@ -69,6 +69,7 @@ export async function POST(req: Request) {
     };
 
     await transporter.sendMail(mailOptions);
+    console.log(`[Email Success] Booking request for ${firstName} ${lastName} sent to ${mailOptions.to}`);
     return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
   } catch (error: any) {
     console.error('Error sending email:', error);
