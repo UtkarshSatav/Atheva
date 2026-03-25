@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -13,18 +14,40 @@ const fadeInUp = {
 const staggerContainer = {
   initial: {},
   whileInView: {
-    transition: {
-      staggerChildren: 0.1
-    }
+    transition: { staggerChildren: 0.1 }
   }
 };
 
 export default function ContactPage() {
+    const [form, setForm] = useState({ name: "", email: "", eventType: "", date: "", message: "" });
+    const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+        setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    };
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setStatus("sending");
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(form),
+            });
+            if (!res.ok) throw new Error("Failed");
+            setStatus("success");
+            setForm({ name: "", email: "", eventType: "", date: "", message: "" });
+        } catch {
+            setStatus("error");
+        }
+    };
+
     return (
         <div className="relative flex flex-col min-h-screen w-full overflow-x-hidden">
             {/* Hero Section */}
             <section className="relative w-full h-[40vh] min-h-[350px] flex items-center justify-center overflow-hidden">
-                <motion.div 
+                <motion.div
                     className="absolute inset-0 z-0"
                     initial={{ scale: 1.1 }}
                     animate={{ scale: 1 }}
@@ -42,7 +65,7 @@ export default function ContactPage() {
                     />
                 </motion.div>
                 <div className="relative z-20 text-center px-6 mt-16">
-                    <motion.h1 
+                    <motion.h1
                         className="text-white font-serif text-4xl md:text-6xl font-medium drop-shadow-lg"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -50,12 +73,12 @@ export default function ContactPage() {
                     >
                         Get in Touch
                     </motion.h1>
-                    <motion.div 
+                    <motion.div
                         className="h-1 w-20 bg-primary-gold mx-auto mt-4"
                         initial={{ width: 0 }}
                         animate={{ width: 80 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                    ></motion.div>
+                    />
                 </div>
             </section>
 
@@ -63,7 +86,7 @@ export default function ContactPage() {
                 <div className="max-w-[1200px] w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
                     {/* Contact Info */}
                     <div className="flex flex-col gap-10 pt-4">
-                        <motion.div 
+                        <motion.div
                             className="space-y-6"
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -82,7 +105,7 @@ export default function ContactPage() {
                             </p>
                         </motion.div>
 
-                        <motion.div 
+                        <motion.div
                             className="flex flex-col gap-8 mt-4 border-t border-border-subtle pt-8"
                             variants={staggerContainer}
                             initial="initial"
@@ -90,15 +113,11 @@ export default function ContactPage() {
                             viewport={{ once: true }}
                         >
                             {[
-                                { title: "Email", value: "chowk0504@gmail.com", sub: "Online support 24/7", icon: "mail" },
+                                { title: "Email", value: "bookings@atheva.in", sub: "Online support 24/7", icon: "mail" },
                                 { title: "Address", value: "WZ-24/1 FF Left Side, Mukharjee Park", sub: "New Delhi – 110018", icon: "location_on" },
                                 { title: "Website", value: "www.atheva.in", sub: "Visit our ecosystem", icon: "public" },
                             ].map((item, i) => (
-                                <motion.div 
-                                    key={i} 
-                                    className="flex items-start gap-6 group"
-                                    variants={fadeInUp}
-                                >
+                                <motion.div key={i} className="flex items-start gap-6 group" variants={fadeInUp}>
                                     <div className="flex h-10 w-10 items-center justify-center text-primary-gold transition-colors">
                                         <span className="material-symbols-outlined text-[28px] font-light">{item.icon}</span>
                                     </div>
@@ -111,8 +130,7 @@ export default function ContactPage() {
                             ))}
                         </motion.div>
 
-                        {/* Simple Map Placeholder */}
-                        <motion.div 
+                        <motion.div
                             className="relative w-full h-56 mt-4 grayscale opacity-80 hover:opacity-100 transition-opacity duration-500 border border-border-subtle bg-background-offwhite flex items-center justify-center"
                             {...fadeInUp}
                         >
@@ -121,7 +139,7 @@ export default function ContactPage() {
                     </div>
 
                     {/* Contact Form */}
-                    <motion.div 
+                    <motion.div
                         className="flex flex-col"
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -134,23 +152,27 @@ export default function ContactPage() {
                                 <h2 className="text-3xl font-serif text-text-main mb-3">Get in Touch</h2>
                                 <p className="text-text-muted font-light mb-8">We would love to hear from you</p>
                             </div>
-                            <form className="flex flex-col gap-8" onSubmit={(e) => e.preventDefault()}>
+                            <form className="flex flex-col gap-8" onSubmit={handleSubmit}>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <label className="flex flex-col gap-2 relative group">
-                                        <span className="text-xs font-bold uppercase tracking-widest text-text-muted group-focus-within:text-primary-gold transition-colors">
-                                            Full Name
-                                        </span>
+                                        <span className="text-xs font-bold uppercase tracking-widest text-text-muted group-focus-within:text-primary-gold transition-colors">Full Name</span>
                                         <input
+                                            name="name"
+                                            value={form.name}
+                                            onChange={handleChange}
+                                            required
                                             className="w-full bg-transparent border-b border-text-light/30 rounded-none px-0 py-2 text-text-main placeholder-text-light focus:outline-none focus:border-primary-gold transition-colors text-base font-light"
                                             placeholder="John Doe"
                                             type="text"
                                         />
                                     </label>
                                     <label className="flex flex-col gap-2 relative group">
-                                        <span className="text-xs font-bold uppercase tracking-widest text-text-muted group-focus-within:text-primary-gold transition-colors">
-                                            Email Address
-                                        </span>
+                                        <span className="text-xs font-bold uppercase tracking-widest text-text-muted group-focus-within:text-primary-gold transition-colors">Email Address</span>
                                         <input
+                                            name="email"
+                                            value={form.email}
+                                            onChange={handleChange}
+                                            required
                                             className="w-full bg-transparent border-b border-text-light/30 rounded-none px-0 py-2 text-text-main placeholder-text-light focus:outline-none focus:border-primary-gold transition-colors text-base font-light"
                                             placeholder="john@example.com"
                                             type="email"
@@ -159,13 +181,14 @@ export default function ContactPage() {
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <label className="flex flex-col gap-2 relative group">
-                                        <span className="text-xs font-bold uppercase tracking-widest text-text-muted group-focus-within:text-primary-gold transition-colors">
-                                            Event Type
-                                        </span>
-                                        <select className="w-full appearance-none bg-transparent border-b border-text-light/30 rounded-none px-0 py-2 text-text-main focus:outline-none focus:border-primary-gold transition-colors text-base font-light cursor-pointer pr-8">
-                                            <option disabled selected value="">
-                                                Select Type
-                                            </option>
+                                        <span className="text-xs font-bold uppercase tracking-widest text-text-muted group-focus-within:text-primary-gold transition-colors">Event Type</span>
+                                        <select
+                                            name="eventType"
+                                            value={form.eventType}
+                                            onChange={handleChange}
+                                            className="w-full appearance-none bg-transparent border-b border-text-light/30 rounded-none px-0 py-2 text-text-main focus:outline-none focus:border-primary-gold transition-colors text-base font-light cursor-pointer pr-8"
+                                        >
+                                            <option value="">Select Type</option>
                                             <option value="stay">Boutique Stay</option>
                                             <option value="wedding">Wedding / Celebration</option>
                                             <option value="corporate">Corporate Retreat</option>
@@ -174,32 +197,42 @@ export default function ContactPage() {
                                         </select>
                                     </label>
                                     <label className="flex flex-col gap-2 relative group">
-                                        <span className="text-xs font-bold uppercase tracking-widest text-text-muted group-focus-within:text-primary-gold transition-colors">
-                                            Preferred Date
-                                        </span>
+                                        <span className="text-xs font-bold uppercase tracking-widest text-text-muted group-focus-within:text-primary-gold transition-colors">Preferred Date</span>
                                         <input
+                                            name="date"
+                                            value={form.date}
+                                            onChange={handleChange}
                                             className="w-full bg-transparent border-b border-text-light/30 rounded-none px-0 py-2 text-text-main placeholder-text-light focus:outline-none focus:border-primary-gold transition-colors text-base font-light"
                                             type="date"
                                         />
                                     </label>
                                 </div>
                                 <label className="flex flex-col gap-2 relative group mt-2">
-                                    <span className="text-xs font-bold uppercase tracking-widest text-text-muted group-focus-within:text-primary-gold transition-colors">
-                                        Message
-                                    </span>
+                                    <span className="text-xs font-bold uppercase tracking-widest text-text-muted group-focus-within:text-primary-gold transition-colors">Message</span>
                                     <textarea
+                                        name="message"
+                                        value={form.message}
+                                        onChange={handleChange}
+                                        required
                                         className="w-full bg-transparent border border-text-light/20 focus:border-primary-gold rounded-none px-4 py-4 text-text-main placeholder-text-light focus:outline-none transition-colors text-base font-light resize-none mt-1"
                                         placeholder="Tell us about your vision..."
                                         rows={4}
-                                    ></textarea>
+                                    />
                                 </label>
                                 <div className="pt-6">
                                     <button
-                                        className="w-full bg-primary-gold hover:bg-primary-dark text-white font-bold uppercase tracking-widest text-sm py-4 px-8 rounded-none transition-all duration-300 shadow-sm hover:shadow-md"
+                                        disabled={status === "sending"}
+                                        className="w-full bg-primary-gold hover:bg-primary-dark text-white font-bold uppercase tracking-widest text-sm py-4 px-8 rounded-none transition-all duration-300 shadow-sm hover:shadow-md disabled:opacity-60"
                                         type="submit"
                                     >
-                                        Send Message
+                                        {status === "sending" ? "Sending..." : "Send Message"}
                                     </button>
+                                    {status === "success" && (
+                                        <p className="text-center text-sm text-green-600 mt-4">Message sent. We will be in touch shortly.</p>
+                                    )}
+                                    {status === "error" && (
+                                        <p className="text-center text-sm text-red-500 mt-4">Something went wrong. Please try again.</p>
+                                    )}
                                     <p className="text-center text-[10px] uppercase tracking-wider text-text-light mt-6">
                                         By submitting this form, you agree to our <a className="underline hover:text-black" href="#">Privacy Policy</a>.
                                     </p>

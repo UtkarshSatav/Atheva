@@ -77,7 +77,7 @@ export default function Footer() {
                         </li>
                         <li className="flex items-center gap-3 text-gray-400 text-sm font-light">
                             <span className="material-symbols-outlined text-base text-primary-gold">mail</span>
-                            chowk0504@gmail.com
+                            bookings@atheva.in
                         </li>
                         <li className="flex items-center gap-3 text-gray-400 text-sm font-light">
                             <span className="material-symbols-outlined text-base text-primary-gold">public</span>
